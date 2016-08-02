@@ -2,7 +2,13 @@
 var mode;
 var gameover;
 var score;
-var player_1;
+var basketball;
+var hoop;
+
+function preload() {
+	basketball = loadAnimation("https://spellewasc.github.io/Agar.io/assets/basketball_resource.png");
+	hoop = loadAnimation("https://spellewasc.github.io/Agar.io/assets/basketball_hoop_resource.png");
+}
 
 function setup() {
 	score=0;
@@ -33,10 +39,7 @@ function draw() {
 	if (mode === 1) {
 		createCanvas(610,610);
 		background(255);
-		fill(color(c3))
-		rect(10,10,100,100)
-		player_1 = loadAnimation("https://spellewasc.github.io/Agar.io/assets/player_model.png");
-		animation(player_1,mouseX,mouseY);
-		draw(mouseX,mouseY);
+		animation(basketball,mouseX,mouseY);
+		animation(hoop,305,102)
 	}
 }
