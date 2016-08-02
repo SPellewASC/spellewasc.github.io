@@ -33,7 +33,7 @@ function draw() {
 	if (mode === 1) {
 		createCanvas(615,615);
 		background(255);
-		player_1 = loadAnimation("assets/player_model.png");
+		player_1 = loadAnimation("https://spellewasc.github.io/Agar.io/assets/player_model.png");
 		animation(player_1,mouseX,mouseY);
 		draw(mouseX,mouseY);
 	}
