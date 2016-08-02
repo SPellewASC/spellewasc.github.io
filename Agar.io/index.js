@@ -35,7 +35,7 @@ function draw() {
 		background(255);
 		fill(color(c3))
 		rect(10,10,100,100)
-		player_1 = loadAnimation("assets/player_model.png");
+		player_1 = loadAnimation("https://spellewasc.github.io/Agar.io/assets/player_model.png");
 		animation(player_1,mouseX,mouseY);
 		draw(mouseX,mouseY);
 	}
