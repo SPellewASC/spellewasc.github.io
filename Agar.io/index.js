@@ -40,11 +40,11 @@ function draw() {
 		createCanvas(610,610);
 		background(127);
 		animation(basketball,305,570);
-		animation(hoop,305,127)
+		animation(hoop,305,127);
 		
 		if (mouseButton == LEFT) {
-			basketball.velocity.x = random(-5,5)
-			basketball.velocity.y = random(-5,5)
+			var basketball_ = createSprite(305,127,63,63);			basketball.velocity.x = random(-5,5)
+			basketball.velocity.y = random(-5,5);
 		}
 	}
 }
