@@ -2,6 +2,7 @@
 var mode;
 var gameover;
 var score;
+var player_1;
 
 function setup() {
 	score=0;
@@ -32,8 +33,8 @@ function draw() {
 	if (mode === 1) {
 		createCanvas(615,615);
 		background(255);
-		player = loadAnimation("assets/player_model.png");
-		animation(player,mouseX,mouseY);
+		player_1 = loadAnimation("assets/player_model.png");
+		animation(player_1,mouseX,mouseY);
 		draw(mouseX,mouseY);
 	}
 }
