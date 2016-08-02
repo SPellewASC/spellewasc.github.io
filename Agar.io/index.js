@@ -1,13 +1,38 @@
 
-var
+var mode;
+var gameover;
+var score;
 
 function setup() {
-	createCanvas(600,600);
-	x=10;
-	y=10;
-	c1=color(0,0,0);
-	c2=color(255,255,255)
-	mode=2;
+	score=0;
+	mode=0;
+	gameover=false;
 }
 
 function draw() {
+	if (mode === 0 && gameover === false) {
+		createCanvas(615,615)
+		background(0)
+		fill(color(255))
+		rect(107.5,207.5,400,150,20)
+		document.getElementById("agar").value
+		c = random();
+		c2 = random();
+		c3 = random();
+		fill(color(c*255,c2*255,c3*255));
+		if (keyCode == ENTER) {
+			mode = 1
+		}
+		// rect(257.5,257.5,100,50,5)
+	}
+	if (mode === 0 && gameover === true) {
+		createCanvas(615,615);
+
+	}
+	if (mode === 1) {
+		createCanvas(615,615);
+		background(255);
+		player = loadAnimation("assets/player_model.png");
+		animation(player,mouseX,mouseY)
+	}
+}
