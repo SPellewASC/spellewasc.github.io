@@ -33,6 +33,8 @@ function draw() {
 	if (mode === 1) {
 		createCanvas(610,610);
 		background(255);
+		fill(color(c3))
+		rect(10,10,100,100)
 		player_1 = loadAnimation("assets/player_model.png");
 		animation(player_1,mouseX,mouseY);
 		draw(mouseX,mouseY);
