@@ -33,6 +33,7 @@ function draw() {
 		createCanvas(615,615);
 		background(255);
 		player = loadAnimation("assets/player_model.png");
-		animation(player,mouseX,mouseY)
+		animation(player,mouseX,mouseY);
+		draw(mouseX,mouseY);
 	}
 }
