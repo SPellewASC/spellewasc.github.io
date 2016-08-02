@@ -39,7 +39,7 @@ function draw() {
 	if (mode === 1) {
 		createCanvas(610,610);
 		background(255);
-		animation(basketball,mouseX,mouseY);
-		animation(hoop,305,102)
+		animation(basketball,305,570);
+		animation(hoop,305,127)
 	}
 }
