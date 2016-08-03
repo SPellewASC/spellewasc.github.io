@@ -1,5 +1,5 @@
 
-var loadimg;
+var loadurl;
 var url = "http://maps.googleapis.com/maps/api/staticmap?center=601%20W.%2026th%20ST.%20NY&zoom=16&size=600x300&key=AIzaSyDJXU9P8ieyia_jPLo26RSrj4tx7Kq1rg4&visual_refresh=true";
 var trainer = "https://spellewasc.github.io/Pokemon/assets/trainer/front/Untitled.png";
 var loadtrainer;
@@ -38,14 +38,14 @@ http://maps.googleapis.com/maps/api/staticmap?
 
 function preload() {
 
-	loadimg = loadImage(url)
+	loadurl = loadImage(url)
 	loadtrainer = loadImage(trainer);
 }
 
 function setup() {
 
 createCanvas(600,300)
-image(loadimg,0,0)
+image(loadurl,0,0)
 image(trainer,0,0);
 
 /*
