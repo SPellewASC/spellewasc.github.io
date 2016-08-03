@@ -38,8 +38,13 @@ function draw() {
 	}
 	if (mode === 1) {
 		createCanvas(610,610);
-		background(255);
+		background(127);
 		animation(basketball,305,570);
 		animation(hoop,305,127)
 	}
 }
+
+if (mouseButton == LEFT) {
+		basketball.velocity.x = random(-5,5)
+		basketball.velocity.y = random(-5,5)
+	}
