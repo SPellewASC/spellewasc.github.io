@@ -38,14 +38,14 @@ http://maps.googleapis.com/maps/api/staticmap?
 
 function preload() {
 
-	loadurl = loadImage(url)
+	loadurl = loadImage(url);
 	loadtrainer = loadImage(trainer);
 }
 
 function setup() {
 
-createCanvas(600,300)
-image(loadurl,0,0)
+createCanvas(600,300);
+image(loadurl,0,0);
 image(trainer,0,0);
 
 /*
