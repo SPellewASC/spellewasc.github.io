@@ -1,12 +1,180 @@
-<!DOCTYPE html>
-<html>
-<center>
-<br>
-<body style="background-color:powderblue;">
-<font color="powderblue"><h1>Cellar Spider</h1></font>
 
-<br>
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/24/CellarSpider.jpg" alt="https://upload.wikimedia.org/wikipedia/commons/2/24/CellarSpider.jpg" width="320" height="240">
+<!DOCTYPE html>
+<html lang="en" id="hypertext">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://code.jquery.com/jquery-3.1.0.min.js" integrity="xha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://use.fontawesome.com/f94bb54fe1.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+
+<!-- <title> </title> -->
+<!-- FAVICON -->
+</head>
+
+<body>
+<div id="Canvas_Container">
+<canvas id="Canvas_1" width="100" height="100">
+</canvas>
+</div>
+
+<div id="Header" class="container-fluid">
+
+  <!-- <h1>Home</h1>
+  <p>This is some text.</p> -->
+</div>
+
+<div class="text-center" role="group">
+<div id ="Buttons" class="btn-group">
+
+	<button id="Button_1" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal_1">
+		<div id="Button_Info">
+    <i class="fa fa-clone fa-lg" aria-hidden="true"></i>
+		<h5 id="Button_Text">Resume</h5>
+    </div>
+	</button>
+
+		<div id="Modal_1" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <div class="modal-content">
+      <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">HEADER 1</h4>
+      </div>
+      <div class="modal-body">
+        <p>TEXT</p>
+      </div>
+    </div>
+
+  </div>
+		</div>
+
+	<button id="Button_2" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal_2">
+		<div id="Button_Info">
+    <i class="fa fa-check-square-o fa-lg" aria-hidden="true"></i>
+		<h5 id="Button_Text">Goal</h5>
+    </div>
+	</button>
+	<div id="Modal_2" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <div class="modal-content">
+      <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">HEADER 2</h4>
+      </div>
+      <div class="modal-body">
+        <p>TEXT</p>
+      </div>
+    </div>
+    </div>
+    </div>
+	
+	<button id="Button_3" type="button" class="btn btn-info btn-lg">
+		<div id="Button_Info">
+    <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+		<h5 id="Button_Text">Home</h5>
+    </div>
+	</button>
+
+	<button id="Button_4" type="button" class="btn btn-info btn-lg">
+		<div id="Button_Info">
+    <i class="fa fa-book fa-lg" aria-hidden="true"></i>
+		<h5 id="Button_Text">Portfolio</h5>
+    </div>
+	</button>
+
+  <button id="Button_5" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal_3">
+    <div id="Button_Info">
+    <i class="fa fa-check-square-o fa-lg" aria-hidden="true"></i>
+    <h5 id="Button_Text">Contact</h5>
+    </div>
+  </button>
+
+    <div id="Modal_3" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <div class="modal-content">
+      <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">HEADER 3</h4>
+      </div>
+      <div class="modal-body">
+        <p>TEXT</p>
+      </div>
+    </div>
+
+  </div>
+    </div>
+
+
+	
+
+<div id="Carousel_1" class="carousel slide" data-ride="carousel">
+
+  <ol class="carousel-indicators">
+    <li data-target="#Carousel_1" data-slide-to="0" class="active"></li>
+    <li data-target="#Carousel_1" data-slide-to="1"></li>
+    <li data-target="#Carousel_1" data-slide-to="2"></li>
+    <li data-target="#Carousel_1" data-slide-to="3"></li>
+  </ol>
+
+  <div id="Carousel_1_Wrapper" class="carousel-inner" role="listbox">
+    <div class="item active">
+    	<img src="cellarspider.png" alt="Placeholder">
+    	<div class="carousel-caption">
+      		<h3>Chania</h3>
+        	<p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+    	</div>
+      </div>
+
+    <div class="item">
+      <img src="cellarspider.png" alt="Placeholder">
+      <div class="carousel-caption">
+      		<h3>Chania</h3>
+        	<p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+    	</div>
+    </div>
+
+    <div class="item">
+      <img src="cellarspider.png" alt="Placeholder">
+      <div class="carousel-caption">
+      		<h3>Chania</h3>
+        	<p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+    	</div>
+    </div>
+
+    <div class="item">
+      <img src="cellarspider.png" alt="Placeholder">
+      <div class="carousel-caption">
+      		<h3>Chania</h3>
+        	<p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+    	</div>
+    </div>
+  </div>
+
+  <a class="left carousel-control" href="#Carousel_1" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#Carousel_1" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
 </body>
+
 </html>
+
+<script
+	type="text/javascript" src="index.js">
+</script>
+

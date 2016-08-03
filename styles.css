@@ -1,0 +1,123 @@
+
+img {
+	border-top-right-radius:0px; 
+	border-top-left-radius:0px;
+	border-bottom-left-radius:17px;
+	border-bottom-right-radius:17px;
+}
+
+#Canvas_1 {
+	position:fixed; 
+	top:0;
+	left:0;
+	background-color: #111;
+}
+
+.carousel .item {
+	border-radius: 0px 0px 17px 17px;
+    overflow: hidden;
+}
+
+.carousel-control {
+    border-radius: 17px;
+}
+
+#Carousel_1 {
+	width: 75vw;
+	margin: 0 auto;
+	top: 15vh;
+ }
+
+#Carousel_1_Wrapper {
+	width: 75vw;
+	margin: 0 auto;
+}
+
+#Buttons {
+	width: 75vw;
+	margin: 0 auto;
+}
+
+#Button_Text {
+    font-family: 'Bungee Inline', cursive;
+    font-size: 17px;
+    text-align: center;
+}
+
+#Button_1 {
+	width: 15.02vw;
+	top: 15vh;
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 0px;
+	z-index: 1;
+}
+
+#Button_2 {
+	width: 15.02vw;
+	top: 15vh;
+	border-radius: 0;
+	z-index: 1;
+}
+
+#Button_3 {
+	width: 15.02vw;
+	top: 15vh;
+	border-radius: 0;
+	z-index: 1;
+}
+#Button_4 {
+	width: 15.02vw;
+	top: 15vh;
+	border-radius: 0;
+	z-index: 1;
+}
+
+#Button_5 {
+	width: 15.02vw;
+	top: 15vh;
+	z-index: 1;
+	border-top-right-radius: 12px;
+}
+
+/*
+
+#Button_1 {
+	width: 15vw;
+	top: 15vh;
+	outline-color: #ffffff;
+	background-color:#ffffff;
+	border-color: #ffffff;
+}
+
+#Button_2 {
+	width: 15vw;
+	top: 15vh;
+	outline-color: #ABA8A8;
+	background-color:#ABA8A8;
+	border-color: #ABA8A8;
+}
+
+#Button_3 {
+	width: 15vw;
+	top: 15vh;
+	outline-color: #7F7878;
+	background-color:#7F7878;
+	border-color: #7F7878;	
+}
+#Button_4 {
+	width: 15vw;
+	top: 15vh;
+	outline-color: #404040;
+	background-color:#404040;
+	border-color: #404040;
+}
+
+#Button_5 {
+	width: 15vw;
+	top: 15vh;
+	outline-color: #000000;
+	background-color:#000000;
+	border-color: #000000;
+}
+
+*/
