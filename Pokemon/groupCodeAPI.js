@@ -1,8 +1,7 @@
 
-var trainer = new Image();
-trainer.src = "https://spellewasc.github.io/Pokemon/assets/trainer/front/Untitled.png";
-var url = new Image();
-url.src = "http://maps.googleapis.com/maps/api/staticmap?center=601%20W.%2026th%20ST.%20NY&zoom=16&size=600x300&key=AIzaSyDJXU9P8ieyia_jPLo26RSrj4tx7Kq1rg4&visual_refresh=true"
+var loadimg;
+var url = "http://maps.googleapis.com/maps/api/staticmap?center=601%20W.%2026th%20ST.%20NY&zoom=16&size=600x300&key=AIzaSyDJXU9P8ieyia_jPLo26RSrj4tx7Kq1rg4&visual_refresh=true";
+
 /*
 
 var center = "center=601 W. 26th ST. NY";
@@ -35,18 +34,17 @@ http://maps.googleapis.com/maps/api/staticmap?
 
 */
 
+function preload() {
+
+	loadimg = loadImage(url)
+
 }
 
 function setup() {
 
-createCanvas(600,300);
+createCanvas(600,300)
+image(loadimg,0,0)
 
-/*
-image(loadurl,0,0);
-image(trainer,268,128);
-*/
-canvasContext.drawImage(url, 0, 0);
-canvasContext.drawImage(trainer, 268, 128);
 /*
 
 &markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7CAlbany,+NY
@@ -56,6 +54,5 @@ canvasContext.drawImage(trainer, 268, 128);
 }
 
 function draw() {
-	
-	animation(trainer,305,305);
+
 }
