@@ -44,9 +44,10 @@ function preload() {
 function setup() {
 
 createCanvas(600,300)
-image(loadimg,0,0)
 
 /*
+
+image(loadimg,0,0)
 
 &markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7CAlbany,+NY
 
