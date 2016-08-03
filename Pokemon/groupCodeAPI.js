@@ -14,9 +14,11 @@ url = encodeURI(url);
 
 */
 
-var markerList = ["&markers=icon:http://megaicons.net/static/img/icons_sizes/388/1147/64/025-pikachu-icon.png%7Cshadow:true%7C", "&markers=icon:http://megaicons.net/static/img/icons_sizes/388/1147/64/133-eevee-icon.png%7Cshadow:true%7C", "&markers=icon:http://megaicons.net/static/img/icons_sizes/388/1147/64/056-mankey-icon.png%7Cshadow:true%7C", "&markers=icon:http://megaicons.net/static/img/icons_sizes/388/1147/64/058-growlithe-icon.png%7Cshadow:true%7C", "&markers=icon:http://megaicons.net/static/img/icons_sizes/388/1147/64/016-pidgey-icon.png%7Cshadow:true%7C"];
+var markerList = ["&markers=icon:http://megaicons.net/static/img/icons_sizes/388/1147/64/025-pikachu-icon.png%7Cshadow:true%7C", "&markers=icon:http://megaicons.net/static/img/icons_sizes/388/1147/64/133-eevee-icon.png%7Cshadow:true%7C", "&markers=icon:http://megaicons.net/static/img/icons_sizes/388/1147/64/056-mankey-icon.png%7Cshadow:true%7C", "&markers=icon:http://megaicons.net/static/img/icons_sizes/388/1147/64/058-growlithe-icon.png%7Cshadow:true%7C", "&markers=icon:http://megaicons.net/static/img/icons_sizes/388/1147/64/016-pidgey-icon.png%7Cshadow:true%7C","&markers=icon=http://megaicons.net/static/img/icons_sizes/388/1147/64/063-abra-icon.png%7Cshadow:true%7C"];
 
 var pikas = ["601 W 26th St. NY","500 W 30th St. NY", "551 W 26th St. NY", "685 W 26th St. NY", "600 25th St. NY"];
+
+var pikasList = [];
 
 for (var i = 0; i < pikas.length; i ++) {
 	var pika = encodeURI(pikas[i]);
