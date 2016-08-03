@@ -57,5 +57,5 @@ image(loadimg,0,0)
 function draw() {
 	player = loadAnimation("spellewasc.github.io/Pokemon/assets/trainer/front/Untitled.png");
 	animation(player,268,128);
-	)
+	
 }
