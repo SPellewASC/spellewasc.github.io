@@ -1,6 +1,7 @@
 
 var loadimg;
 var url = "http://maps.googleapis.com/maps/api/staticmap?center=601%20W.%2026th%20ST.%20NY&zoom=16&size=600x300&key=AIzaSyDJXU9P8ieyia_jPLo26RSrj4tx7Kq1rg4&visual_refresh=true";
+var player;
 
 /*
 
@@ -54,5 +55,7 @@ image(loadimg,0,0)
 }
 
 function draw() {
-
+	player = loadAnimation("spellewasc.github.io/Pokemon/assets/trainer/front/Untitled.png");
+	animation(player,268,128);
+	)
 }
