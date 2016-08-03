@@ -55,7 +55,7 @@ image(loadimg,0,0)
 }
 
 function draw() {
-	player = loadAnimation("/assets/trainer/front/Untitled.png");
+	player = loadAnimation("/Pokemon/assets/trainer/front/Untitled.png");
 	animation(player,268,128);
 	
 }
