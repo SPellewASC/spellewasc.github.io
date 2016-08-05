@@ -35,6 +35,7 @@ function preload() {
 
 	canvas = loadImage(url);
 	player_model = loadImage(frame1);
+	
 }
 
 function setup() {
@@ -43,10 +44,12 @@ function setup() {
 	image(canvas,0,0);
 	player = createSprite(320,320,64,64);
 	player.addImage(player_model);
+	canvas.parent('sketch-holder');
 
 }
 
 function draw() {
+	
 	if (mouse === true) {
 	}
 
