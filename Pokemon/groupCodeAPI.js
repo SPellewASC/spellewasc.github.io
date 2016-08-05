@@ -39,9 +39,9 @@ function preload() {
 
 function setup() {
 
-	createCanvas(600,300);
+	createCanvas(640,640);
 	image(canvas,0,0);
-	player = createSprite(300,150,64,64);
+	player = createSprite(320,320,64,64);
 	player.addImage(player_model);
 
 }
