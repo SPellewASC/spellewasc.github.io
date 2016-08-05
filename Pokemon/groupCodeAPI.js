@@ -9,6 +9,7 @@ var frame1 = "https://spellewasc.github.io/Pokemon/assets/player_model.gif";
 var direction = 90;
 var mouse = false;
 var cnv;
+<<<<<<< HEAD
 
 function centerCanvas() {
   var x = (windowWidth - width) / 2;
@@ -20,6 +21,8 @@ function windowResized() {
   centerCanvas();
 }
 
+=======
+>>>>>>> origin/master
 
 function changeinput() {
 	if (mouse === false) {
@@ -52,12 +55,28 @@ function preload() {
 
 function setup() {
 
+<<<<<<< HEAD
     cnv = createCanvas(640, 640);
     centerCanvas();
+=======
+	cnv = createCanvas(640, 640);
+  	centerCanvas();
+>>>>>>> origin/master
 	image(canvas,0,0);
 	player = createSprite(320,320,64,64);
 	player.addImage(player_model);
+	canvas.parent('sketch-holder');
 
+}
+
+function centerCanvas() {
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  cnv.position(x, y);
+}
+
+function windowResized() {
+  centerCanvas();
 }
 
 function windowResized() {
