@@ -56,7 +56,6 @@ function setup() {
 	image(canvas,0,0);
 	player = createSprite(320,320,64,64);
 	player.addImage(player_model);
-	canvas.parent('sketch-holder');
 
 }
 
