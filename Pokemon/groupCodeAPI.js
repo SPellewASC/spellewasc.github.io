@@ -10,16 +10,6 @@ var direction = 90;
 var mouse = false;
 var cnv;
 
-function centerCanvas() {
-  var x = (windowWidth - width) / 2;
-  var y = (windowHeight - height) / 2;
-  cnv.position(x, y);
-}
-
-function windowResized() {
-  centerCanvas();
-}
-
 function changeinput() {
 	if (mouse === false) {
 		console.log(mouse)
@@ -58,6 +48,16 @@ function setup() {
 	player.addImage(player_model);
 	canvas.parent('sketch-holder');
 
+}
+
+function centerCanvas() {
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  cnv.position(x, y);
+}
+
+function windowResized() {
+  centerCanvas();
 }
 
 function draw() {
