@@ -7,7 +7,7 @@ var score;
 var player_1;
 
 function preload() {
-	song = loadSound("http://spellewasc.github.io/Music_App/assets/Noname - Shadow Man Feat. Saba, Smino & Phoelix - HotNewHipHop.mp3")
+	song = loadSound("http://spellewasc.github.io/Music_App/assets/Shadow_Man.mp3")
 	// loads song from assets
 }
 
