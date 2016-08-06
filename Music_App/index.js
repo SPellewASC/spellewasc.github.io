@@ -79,7 +79,7 @@ function setup() {
 	input.start()
 	inputLevel = input.getLevel();
 	player = createSprite(50,280,50,100)
-	obstacle = createSprite(610,inputLevel,510,150)
+	obstacle = createSprite(Math.random()*610,Math.random()*1220,510,150)
   	var myAnimation = player.addAnimation("floating", "assets/ghost_standing0001.png", "assets/ghost_standing0007.png");
   	player.addAnimation("moving", "assets/ghost_walk0001.png", "assets/ghost_walk0004.png");
 	player.addAnimation("spinning", "assets/ghost_spin0001.png", "assets/ghost_spin0003.png");
