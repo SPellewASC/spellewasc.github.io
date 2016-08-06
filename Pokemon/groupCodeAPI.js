@@ -2,12 +2,9 @@
 var player;
 var loadimg;
 var url = "http://maps.googleapis.com/maps/api/staticmap?center=Rockefeller+Center,+10+Rockefeller+Plaza,+New+York,+NY+10020&zoom=15&scale=1&size=640x640&maptype=roadmap&key=AIzaSyDJXU9P8ieyia_jPLo26RSrj4tx7Kq1rg4&format=png&visual_refresh=true";
-<<<<<<< HEAD
-=======
 var markerList = ["&markers=icon:http://megaicons.net/static/img/icons_sizes/388/1147/64/025-pikachu-icon.png%7Cshadow:true%7C", "&markers=icon:http://megaicons.net/static/img/icons_sizes/388/1147/64/133-eevee-icon.png%7Cshadow:true%7C", "&markers=icon:http://megaicons.net/static/img/icons_sizes/388/1147/64/056-mankey-icon.png%7Cshadow:true%7C", "&markers=icon:http://megaicons.net/static/img/icons_sizes/388/1147/64/058-growlithe-icon.png%7Cshadow:true%7C", "&markers=icon:http://megaicons.net/static/img/icons_sizes/388/1147/64/016-pidgey-icon.png%7Cshadow:true%7C","&markers=icon:http://megaicons.net/static/img/icons_sizes/388/1147/64/063-abra-icon.png%7Cshadow:true%7C","&markers=icon:http://megaicons.net/static/img/icons_sizes/388/1147/64/060-poliwag-icon.png%7Cshadow:true%7C","&markers=icon:http://megaicons.net/static/img/icons_sizes/388/1147/64/043-oddish-icon.png%7Cshadow:true%7C","&markers=icon:http://megaicons.net/static/img/icons_sizes/388/1147/64/041-zubat-icon.png%7Cshadow:true%7C","&markers=icon:http://megaicons.net/static/img/icons_sizes/388/1147/64/043-oddish-icon.png%7Cshadow:true%7C"];
 var pikas = ["100 W 53rd St. NY","1 W 57th St. NY", "132 W 39th St. NY", "50 E 42nd St. NY", "2 W 45th St. NY","1st Ave Tunnel NY", "275 E 57th St. NY","32 W 48th St. NY", "500 7th Ave. NY"];
 var pikasList = [];
->>>>>>> origin/master
 var frame1 = "https://spellewasc.github.io/Pokemon/assets/player_model.gif";
 var direction = 90;
 var mouse = false;
@@ -40,24 +37,12 @@ function changeinput() {
 	}
 }
 
-<<<<<<< HEAD
-function createVariables(){
-  var accounts = [];
-
-  for (var i = 0; i <= 20; ++i) {
-      accounts[i] = "whatever";
-  }
-
-  return accounts;
-=======
 for (var i = 0; i < pikas.length; i ++) {
 	
 	var pika = encodeURI(pikas[i]);
 	var markerStart = markerList[Math.floor(Math.random()*markerList.length)];
 	console.log(markerStart);
 	url = url + markerStart + pika;
->>>>>>> origin/master
-}
 
 function preload() {
 
@@ -86,14 +71,10 @@ function setup() {
 	image(canvas,0,0);
 	player = createSprite(320,320,64,64);
 	player.addImage(player_model);
-<<<<<<< HEAD
 	for (var i = 0; i <= 10; ++i) {
 		pokemon[i] = createSprite(Math.random() * 640, Math.random() * 640, 1, 1)
 		player.addImage(pokeimg)
 	}
-=======
->>>>>>> origin/master
-
 }
 
 function centerCanvas() {
