@@ -50,7 +50,7 @@ function player_movement() {
 		if (player.position.x > width) {
 			player.setSpeed(0,0);
 			if (keyIsDown(LEFT_ARROW)) {
-				player.setSpeed(2.25,0);
+				player.setSpeed(2.25,180);
 			}
 		}
 	}
