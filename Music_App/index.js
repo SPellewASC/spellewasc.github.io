@@ -115,7 +115,7 @@ function draw() {
 			input = new p5.AudioIn()
 			input.start()
 			console.log(input.enabled)
-			if (input.enabled === false) {
+			if (input.enabled === true) {
 				error = false;
 			}	
 		}
