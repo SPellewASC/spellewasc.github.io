@@ -38,7 +38,7 @@ function player_movement() {
 		}
 	}
 	if (player.position.x < 0) {
-			player.setSpeed(0,0)
+		player.setSpeed(0,0);
 	}
 }
 		/*
