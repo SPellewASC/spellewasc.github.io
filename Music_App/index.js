@@ -94,6 +94,7 @@ function draw() {
 		inputLevel = input.getLevel();
   		// console.log(inputLevel)
 		drawSprites();
+		player_movement()
 	}
 	if (mode === 1 && error === true) {
 		createCanvas(1220,610);
