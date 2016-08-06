@@ -98,6 +98,8 @@ function draw() {
   		// console.log(inputLevel)
 		drawSprites();
 		player_movement()
+		inputLevel = input.getLevel();
+  		ellipse(width/2, constrain(height-inputLevel*height*5, 0, height), 10, 10);
 	}
 	if (mode === 1 && error === true) {
 		createCanvas(1220,610);
@@ -105,13 +107,12 @@ function draw() {
 		textSize(32);
 		text("ERROR", 10, 30);
 		if (keyIsDown(ENTER)) {
-			input1 = new p5.AudioIn()
-			input1.start()
-			console.log(input1.enabled)
-			if (input1.enabled === false) {
+			input = new p5.AudioIn()
+			input.start()
+			console.log(input.enabled)
+			if (input.enabled === false) {
 				error = false;
 			}	
 		}
 	}
 }
-
