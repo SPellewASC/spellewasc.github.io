@@ -24,8 +24,7 @@ function togglePlay() {
 */
 
 function player_movement() {
-	console.log(player.position.x)
-	console.log(width)
+	console.log(player.width)
 	// console.log(player.position.y)
 		if (keyIsDown(RIGHT_ARROW)) {
 			player.setSpeed(2.25,0);
