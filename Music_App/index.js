@@ -24,9 +24,10 @@ function togglePlay() {
 */
 
 function player_movement() {
+	console.log(player.position.x)
+	console.log(player.position.y)
 	if (player.position.x > 40 && player.position.x < 1180 && player.position.y < 525 && player.position.y > 85) {
-		console.log(player.position.x)
-		console.log(player.position.y)
+
 		//console.log()
 		//console.log()
 		if (keyIsDown(RIGHT_ARROW)) {
