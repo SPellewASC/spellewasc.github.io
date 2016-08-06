@@ -94,10 +94,11 @@ function draw() {
 	}
 	if (mode === 0 && gameover === true) {
 		createCanvas(1220,610);
+		background(0)
 	}
 	if (mode === 1 && error === false) {
 		createCanvas(1220,610);
-		background(255);
+		background(0);
 		inputLevel = input.getLevel();
   		// console.log(inputLevel)
 		drawSprites();
