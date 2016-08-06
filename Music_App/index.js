@@ -36,12 +36,14 @@ function player_movement() {
 		else if (keyIsDown(LEFT_ARROW)) {
 			player.setSpeed(2.25,180);
 		}
+		/*
 		else if (keyIsDown(DOWN_ARROW)) {
 			player.setSpeed(2.25,90);
 		}
 		else if (keyIsDown(UP_ARROW)) {
 			player.setSpeed(2.25,270);
 		}
+		*/
 		else {
 			player.setSpeed(0,0)	
 		}
