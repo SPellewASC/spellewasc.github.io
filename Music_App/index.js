@@ -28,22 +28,21 @@ function player_movement() {
 		//console.log(player.position.x)
 		//console.log(player.width)
 		if (keyIsDown(RIGHT_ARROW)) {
-			player.setSpeed(3.5,0);
+			player.setSpeed(2.25,0);
 		}
 		else if (keyIsDown(LEFT_ARROW)) {
-			player.setSpeed(3.5,180);
+			player.setSpeed(2.25,180);
 		}
 	}
 	console.log(player.position.y)
 	console.log(player.height)
 	console.log(620-player.height)
-	if (player.position.y <= 610-100 && player.position.y >= player.height) {
-		
+	if (player.position.y <= 510 && player.position.y >= 0) {
 		if (keyIsDown(DOWN_ARROW)) {
-			player.setSpeed(3.5,90);
+			player.setSpeed(2.25,90);
 		}
 		else if (keyIsDown(UP_ARROW)) {
-			player.setSpeed(3.5,270);
+			player.setSpeed(2.25,270);
 		}
 	}
 }
@@ -115,7 +114,7 @@ function draw() {
 			input = new p5.AudioIn()
 			input.start()
 			console.log(input.enabled)
-			if (input.enabled === true) {
+			if (input.enabled === false) {
 				error = false;
 			}	
 		}
