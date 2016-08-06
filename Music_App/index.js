@@ -28,15 +28,15 @@ function player_movement() {
 		if (keyIsDown(RIGHT_ARROW)) {
 			player.setSpeed(1.5,0);
 		}
-		else if (keyIsDown(DOWN_ARROW)) {
-			player.setSpeed(1.5,90);
-		}
-	}
-	if (player.position.y < 610-player.height && player.position.y > 0) {
 		if (keyIsDown(LEFT_ARROW)) {
 			player.setSpeed(1.5,180);
 		}
-		else if (keyIsDown(UP_ARROW)) {
+	}
+	if (player.position.y < 610-player.height && player.position.y > 0) {
+		if (keyIsDown(DOWN_ARROW)) {
+			player.setSpeed(1.5,90);
+		}
+		if (keyIsDown(UP_ARROW)) {
 			player.setSpeed(1.5,270);
 		}
 	else {
