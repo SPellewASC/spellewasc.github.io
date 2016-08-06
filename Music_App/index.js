@@ -25,11 +25,11 @@ function togglePlay() {
 
 function player_movement() {
 	if (player.position.x < 1220 && player.position.x > player.width) {
-		console.log(player.width)
+		console.log(player.position.x)
 		if (keyIsDown(RIGHT_ARROW)) {
 			player.setSpeed(1.5,0);
 		}
-		if (keyIsDown(LEFT_ARROW)) {
+		elif (keyIsDown(LEFT_ARROW)) {
 			player.setSpeed(1.5,180);
 		}
 	}
@@ -37,7 +37,7 @@ function player_movement() {
 		if (keyIsDown(DOWN_ARROW)) {
 			player.setSpeed(1.5,90);
 		}
-		if (keyIsDown(UP_ARROW)) {
+		elif (keyIsDown(UP_ARROW)) {
 			player.setSpeed(1.5,270);
 		}
 	else {
