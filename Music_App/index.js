@@ -34,9 +34,11 @@ function player_movement() {
 			player.setSpeed(3.5,180);
 		}
 	}
+	console.log(player.position.y)
+	console.log(player.height)
+	console.log(620-player.height)
 	if (player.position.y < 620-player.height && player.position.y > player.height) {
-		console.log(player.position.y)
-		console.log(player.height)
+		
 		if (keyIsDown(DOWN_ARROW)) {
 			player.setSpeed(3.5,90);
 		}
