@@ -105,11 +105,11 @@ function draw() {
 		textSize(32);
 		text("ERROR", 10, 30);
 		if (keyIsDown(ENTER)) {
-			input = new p5.AudioIn()
-			input.start()
-			console.log(input.enabled)
-			if (input.enabled === true) {
-			error = false;
+			input1 = new p5.AudioIn()
+			input1.start()
+			console.log(input1.enabled)
+			if (input1.enabled === false) {
+				error = false;
 			}	
 		}
 	}
