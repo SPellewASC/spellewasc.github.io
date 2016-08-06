@@ -79,6 +79,7 @@ function draw() {
 		fill(color(c*255,c2*255,c3*255));
 		if (keyCode === ENTER) {
 			mode = 1
+			console.log(input.enabled)
 			if (input.enabled) {
 				error = false
 			}
@@ -103,7 +104,14 @@ function draw() {
 		background(255);
 		textSize(32);
 		text("ERROR", 10, 30);
-
+		if (keyIsDown(ENTER)) {
+			input = new p5.AudioIn()
+			input.start()
+			console.log(input.enabled)
+			if (input.enabled === true) {
+			error = false;
+			}	
+		}
 	}
 }
 
