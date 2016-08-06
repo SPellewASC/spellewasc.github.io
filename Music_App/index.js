@@ -24,23 +24,25 @@ function togglePlay() {
 */
 
 function player_movement() {
-	console.log(player.position.y)
-	console.log(player.height)
 	if (keyIsDown(RIGHT_ARROW)) {
+		player.changeAnimation(moving)
 		player.setSpeed(2.25,0);
 	}
 	if (keyIsDown(LEFT_ARROW)) {
+		player.changeAnimation(moving)
 		player.setSpeed(2.25,180);
 	}
 	if (player.position.x < 47.75) {
 		player.setSpeed(0,0)
 		if (keyIsDown(RIGHT_ARROW)) {
+		player.changeAnimation(moving)
 		player.setSpeed(2.25,0);
 		}
 	}
 	if (player.position.x > width-player.width-2.5 && player.position.x < width) {
 		player.setSpeed(0,0);
 		if (keyIsDown(LEFT_ARROW)) {
+			player.changeAnimation(moving)
 			player.setSpeed(2.25,180);
 		}
 	}
