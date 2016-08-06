@@ -30,29 +30,35 @@ function player_movement() {
 		player.setSpeed(2.25,0);
 	}
 	if (keyIsDown(LEFT_ARROW)) {
-		player.mirrorX(1);
+		player.mirrorX(-1);
 		player.changeAnimation("moving")
 		player.setSpeed(2.25,180);
 	}
 	if (player.position.x < 47.75) {
 		player.setSpeed(0,0)
+		player.changeAnimation("floating")
 		if (keyIsDown(RIGHT_ARROW)) {
-		player.changeAnimation("moving")
-		player.setSpeed(2.25,0);
+			player.changeAnimation("moving")
+			player.setSpeed(2.25,0);
 		}
 	}
 	if (player.position.x > width-player.width-2.5 && player.position.x < width) {
 		player.setSpeed(0,0);
+		player.changeAnimation("floating")
 		if (keyIsDown(LEFT_ARROW)) {
-			player.mirrorX(1);
+			player.mirrorX(-1);
 			player.changeAnimation("moving")
 			player.setSpeed(2.25,180);
 		}
 	}
+	if (keyIsPressed === false) {
+		player.setSpeed(0,0);
+		player.changeAnimation("floating")
+	}
 }
 
 function enemy_movement() {
-	
+	obstacle.position.y = inputLevel
 }
 
 function setup() {
@@ -69,6 +75,7 @@ function setup() {
 	// loads input from computer
 	input = new p5.AudioIn()
 	input.start()
+	inputLevel = input.getLevel();
 	player = createSprite(50,280,50,100)
 	obstacle = createSprite(610,inputLevel,510,150)
   	var myAnimation = player.addAnimation("floating", "assets/ghost_standing0001.png", "assets/ghost_standing0007.png");
@@ -109,11 +116,9 @@ function draw() {
 	if (mode === 1 && error === false) {
 		createCanvas(1220,610);
 		background(0);
-		inputLevel = input.getLevel();
   		// console.log(inputLevel)
 		drawSprites();
 		player_movement()
-		inputLevel = input.getLevel();
 		enemy_movement()
 	}
 	if (mode === 1 && error === true) {
