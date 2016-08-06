@@ -27,7 +27,7 @@ function player_movement() {
 	console.log(player.position.x)
 	console.log(width)
 	// console.log(player.position.y)
-	if (player.position.x < width && player.position.x > 0) { // && player.position.y < 525 && player.position.y > 85) {
+	if (player.position.x < width) { // && player.position.y < 525 && player.position.y > 85) {
 		//console.log()
 		//console.log()
 		if (keyIsDown(RIGHT_ARROW)) {
@@ -37,6 +37,10 @@ function player_movement() {
 			player.setSpeed(2.25,180);
 		}
 	}
+	if (player.position.x < 0) {
+			player.setSpeed(0,0)
+	}
+}
 		/*
 		else if (keyIsDown(DOWN_ARROW)) {
 			player.setSpeed(2.25,90);
