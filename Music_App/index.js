@@ -24,44 +24,24 @@ function togglePlay() {
 */
 
 function player_movement() {
-	console.log(player.width)
-	// console.log(player.position.y)
+	if (keyIsDown(RIGHT_ARROW)) {
+		player.setSpeed(2.25,0);
+	}
+	if (keyIsDown(LEFT_ARROW)) {
+		player.setSpeed(2.25,180);
+	}
+	if (player.position.x < 47.75) {
+		player.setSpeed(0,0)
 		if (keyIsDown(RIGHT_ARROW)) {
-			player.setSpeed(2.25,0);
+		player.setSpeed(2.25,0);
 		}
+	}
+	if (player.position.x > width-player.width-2.5 && player.position.x < width) {
+		player.setSpeed(0,0);
 		if (keyIsDown(LEFT_ARROW)) {
 			player.setSpeed(2.25,180);
 		}
-		if (player.position.x < 47.75) {
-			player.setSpeed(0,0)
-			if (keyIsDown(RIGHT_ARROW)) {
-				player.setSpeed(2.25,0);
-			}
-		}
-		/*
-		if (player.position.x < 45.5) {
-			player.setSpeed(0,0);
-		}
-		*/
-		if (player.position.x > width-player.width-2.5 && player.position.x < width) {
-			player.setSpeed(0,0);
-			if (keyIsDown(LEFT_ARROW)) {
-				player.setSpeed(2.25,180);
-			}
-		}
-		/*
-		else if (keyIsDown(DOWN_ARROW)) {
-			player.setSpeed(2.25,90);
-		}
-		else if (keyIsDown(UP_ARROW)) {
-			player.setSpeed(2.25,270);
-		}
-		*/
-		/*
-		else {
-			player.setSpeed(0,0)	
-		}
-		*/
+	}
 }
 
 function setup() {
@@ -86,6 +66,7 @@ function setup() {
 }
 
 function draw() {
+	
 	if (mode === 0 && gameover === false) {
 		var cnv = createCanvas(1220,610)
 		// cnv.mouseClicked(togglePlay);
@@ -131,9 +112,12 @@ function draw() {
 			input = new p5.AudioIn()
 			input.start()
 			console.log(input.enabled)
-			if (input.enabled === false) {
+			if (input.enabled === true) {
 				error = false;
-			}	
+			}
+		}
+		if (keyIsDown(CONTROL)) {
+			error = false;
 		}
 	}
 }
