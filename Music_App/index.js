@@ -24,21 +24,25 @@ function togglePlay() {
 */
 
 function player_movement() {
-	if (keyIsDown(RIGHT_ARROW)) {
-		player.setSpeed(1.5,0);
+	if (player.position.x < 1220 && player.position.x > 0) {
+		if (keyIsDown(RIGHT_ARROW)) {
+			player.setSpeed(1.5,0);
 		}
-	else if (keyIsDown(DOWN_ARROW)) {
-		player.setSpeed(1.5,90);
+		else if (keyIsDown(DOWN_ARROW)) {
+			player.setSpeed(1.5,90);
 		}
-	else if (keyIsDown(LEFT_ARROW)) {
-		player.setSpeed(1.5,180);
-		}
-	else if (keyIsDown(UP_ARROW)) {
-		player.setSpeed(1.5,270);
 	}
+	if (player.position.y < 610 && player.position.y > 0) {
+		if (keyIsDown(LEFT_ARROW)) {
+			player.setSpeed(1.5,180);
+		}
+		else if (keyIsDown(UP_ARROW)) {
+			player.setSpeed(1.5,270);
+		}
 	else {
 		player.setSpeed(0,0)
 		}
+	}
 }
 
 function setup() {
