@@ -24,6 +24,7 @@ function togglePlay() {
 */
 
 function player_movement() {
+	if (player.position.x > 40 && player.position.x < 1180 && player.position.y < 525 && player.position.y > 85) {
 		console.log(player.position.x)
 		console.log(player.position.y)
 		//console.log()
@@ -44,6 +45,7 @@ function player_movement() {
 			player.setSpeed(0,0)	
 		}
 	}
+}
 
 function setup() {
 	score = 0;
