@@ -15,6 +15,10 @@ function setup() {
 	score=0;
 	mode=0;
 	gameover=false;
+	song.setVolume(0.1);
+		// sets the volume for song
+  		song.play();
+		// plays song
 }
 
 function draw() {
@@ -40,9 +44,5 @@ function draw() {
 	if (mode === 1) {
 		createCanvas(610,610);
 		background(255);
-		song.setVolume(0.1);
-		// sets the volume for song
-  		song.play();
-		// plays song
 	}
 }
