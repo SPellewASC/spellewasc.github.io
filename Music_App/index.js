@@ -3,8 +3,7 @@ var input;
 var mode;
 var gameover;
 var score;
-var player_x
-var player_y;
+var player;
 
 /*
 
@@ -56,7 +55,7 @@ function setup() {
 	// loads input from computer
 	input = new p5.AudioIn()
 	input.start()
-	var player = createSprite(50,510,50,100)
+	player = createSprite(50,510,50,100)
   	var myAnimation = player.addAnimation("floating", "assets/ghost_standing0001.png", "assets/ghost_standing0007.png");
   	player.addAnimation("moving", "assets/ghost_walk0001.png", "assets/ghost_walk0004.png");
 	player.addAnimation("spinning", "assets/ghost_spin0001.png", "assets/ghost_spin0003.png");
