@@ -25,24 +25,24 @@ function togglePlay() {
 
 function player_movement() {
 	if (keyIsDown(RIGHT_ARROW)) {
-		player.changeAnimation(moving)
+		player.changeAnimation("moving")
 		player.setSpeed(2.25,0);
 	}
 	if (keyIsDown(LEFT_ARROW)) {
-		player.changeAnimation(moving)
+		player.changeAnimation("moving")
 		player.setSpeed(2.25,180);
 	}
 	if (player.position.x < 47.75) {
 		player.setSpeed(0,0)
 		if (keyIsDown(RIGHT_ARROW)) {
-		player.changeAnimation(moving)
+		player.changeAnimation("moving")
 		player.setSpeed(2.25,0);
 		}
 	}
 	if (player.position.x > width-player.width-2.5 && player.position.x < width) {
 		player.setSpeed(0,0);
 		if (keyIsDown(LEFT_ARROW)) {
-			player.changeAnimation(moving)
+			player.changeAnimation("moving")
 			player.setSpeed(2.25,180);
 		}
 	}
@@ -106,6 +106,7 @@ function draw() {
 		drawSprites();
 		player_movement()
 		inputLevel = input.getLevel();
+		fill(0,255,0)
   		ellipse(width/2, constrain(height-inputLevel*height*5, 0, height), 10, 10);
 	}
 	if (mode === 1 && error === true) {
