@@ -27,18 +27,19 @@ function player_movement() {
 	if (player.position.x < 1220 && player.position.x > player.width) {
 		console.log(player.position.x)
 		if (keyIsDown(RIGHT_ARROW)) {
-			player.setSpeed(1.5,0);
+			player.setSpeed(3.5,0);
 		}
 		else if (keyIsDown(LEFT_ARROW)) {
-			player.setSpeed(1.5,180);
+			player.setSpeed(3.5,180);
 		}
 	}
 	if (player.position.y < 610 && player.position.y > player.height) {
+		console.log(player.position.y)
 		if (keyIsDown(DOWN_ARROW)) {
-			player.setSpeed(1.5,90);
+			player.setSpeed(3.5,90);
 		}
 		else if (keyIsDown(UP_ARROW)) {
-			player.setSpeed(1.5,270);
+			player.setSpeed(3.5,270);
 		}
 	}
 }
