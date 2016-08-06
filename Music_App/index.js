@@ -38,6 +38,9 @@ function player_movement() {
 		}
 		if (player.position.x < 47.75) {
 			player.setSpeed(0,0)
+				if (keyIsDown(RIGHT_ARROW)) {
+					player.setSpeed(2.25,0);
+		}
 		}
 		if (player.position.x < 45.5) {
 			player.setSpeed(0,0);
