@@ -29,6 +29,7 @@ function player_movement() {
 		player.setSpeed(2.25,0);
 	}
 	if (keyIsDown(LEFT_ARROW)) {
+		player.mirrorX(1);
 		player.changeAnimation("moving")
 		player.setSpeed(2.25,180);
 	}
@@ -42,10 +43,15 @@ function player_movement() {
 	if (player.position.x > width-player.width-2.5 && player.position.x < width) {
 		player.setSpeed(0,0);
 		if (keyIsDown(LEFT_ARROW)) {
+			player.mirrorX(1);
 			player.changeAnimation("moving")
 			player.setSpeed(2.25,180);
 		}
 	}
+}
+
+function enemy_movement() {
+	
 }
 
 function setup() {
@@ -63,6 +69,7 @@ function setup() {
 	input = new p5.AudioIn()
 	input.start()
 	player = createSprite(50,280,50,100)
+	obstacle = createSprite(610,inputLevel,510,150)
   	var myAnimation = player.addAnimation("floating", "assets/ghost_standing0001.png", "assets/ghost_standing0007.png");
   	player.addAnimation("moving", "assets/ghost_walk0001.png", "assets/ghost_walk0004.png");
 	player.addAnimation("spinning", "assets/ghost_spin0001.png", "assets/ghost_spin0003.png");
@@ -106,8 +113,7 @@ function draw() {
 		drawSprites();
 		player_movement()
 		inputLevel = input.getLevel();
-		fill(0,255,0)
-  		ellipse(width/2, constrain(height-inputLevel*height*5, 0, height), 10, 10);
+		enemy_movement()
 	}
 	if (mode === 1 && error === true) {
 		createCanvas(1220,610);
