@@ -60,6 +60,7 @@ function player_movement() {
 }
 
 function enemy_movement() {
+	inputLevel = input.getLevel();
 	obstacle.position.y = inputLevel
 }
 
@@ -77,7 +78,6 @@ function setup() {
 	// loads input from computer
 	input = new p5.AudioIn()
 	input.start()
-	inputLevel = input.getLevel();
 	player = createSprite(50,280,50,100)
 	obstacle = createSprite(Math.random()*610,Math.random()*1220,510,150)
   	var myAnimation = player.addAnimation("floating", "assets/ghost_standing0001.png", "assets/ghost_standing0007.png");
