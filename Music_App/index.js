@@ -4,6 +4,7 @@ var mode;
 var gameover;
 var score;
 var player;
+var inputLevel;
 
 /*
 
