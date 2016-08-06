@@ -61,7 +61,9 @@ function player_movement() {
 
 function enemy_movement() {
 	inputLevel = input.getLevel();
-	obstacle.position.y = inputLevel
+	obstacle.position.y = inputLevel;
+	console.log(obstacle.position.y)
+	console.log(inputLevel)
 }
 
 function setup() {
