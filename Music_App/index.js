@@ -40,9 +40,6 @@ function player_movement() {
 		elif (keyIsDown(UP_ARROW)) {
 			player.setSpeed(1.5,270);
 		}
-	else {
-		player.setSpeed(0,0)
-		}
 	}
 }
 
