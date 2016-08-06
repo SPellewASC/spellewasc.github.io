@@ -3,7 +3,8 @@ var input;
 var mode;
 var gameover;
 var score;
-var player_1;
+var player_x
+var player_y;
 
 /*
 
@@ -23,6 +24,23 @@ function togglePlay() {
 
 */
 
+function player_movement() {
+	if (keyIsDown(RIGHT_ARROW)) {
+		player.setSpeed(1.5,0);
+		}
+	else if (keyIsDown(DOWN_ARROW)) {
+		player.setSpeed(1.5,90);
+		}
+	else if (keyIsDown(LEFT_ARROW)) {
+		player.setSpeed(1.5,180);
+		}
+	else if (keyIsDown(UP_ARROW)) {
+		player.setSpeed(1.5,270);
+	}
+	else {
+		player.setSpeed(0,0)
+		}
+}
 
 function setup() {
 	score = 0;
@@ -38,10 +56,10 @@ function setup() {
 	// loads input from computer
 	input = new p5.AudioIn()
 	input.start()
-	var ghost = createSprite(50,510,50,100)
-  	var myAnimation = ghost.addAnimation("floating", "assets/ghost_standing0001.png", "assets/ghost_standing0007.png");
-  	ghost.addAnimation("moving", "assets/ghost_walk0001.png", "assets/ghost_walk0004.png");
-	ghost.addAnimation("spinning", "assets/ghost_spin0001.png", "assets/ghost_spin0003.png");
+	var player = createSprite(50,510,50,100)
+  	var myAnimation = player.addAnimation("floating", "assets/ghost_standing0001.png", "assets/ghost_standing0007.png");
+  	player.addAnimation("moving", "assets/ghost_walk0001.png", "assets/ghost_walk0004.png");
+	player.addAnimation("spinning", "assets/ghost_spin0001.png", "assets/ghost_spin0003.png");
 	// fft = new p5.FFT();
 }
 
