@@ -25,17 +25,19 @@ function togglePlay() {
 
 function player_movement() {
 	console.log(player.position.x)
-	console.log(player.position.y)
-	if (player.position.x > 40 && player.position.x < 1180 && player.position.y < 525 && player.position.y > 85) {
-
+	// console.log(player.position.y)
+	if (player.position.x > 40) { // && player.position.y < 525 && player.position.y > 85) {
 		//console.log()
 		//console.log()
 		if (keyIsDown(RIGHT_ARROW)) {
 			player.setSpeed(2.25,0);
 		}
-		else if (keyIsDown(LEFT_ARROW)) {
+	}
+	if (player.position.x < 1180) {
+		if (keyIsDown(LEFT_ARROW)) {
 			player.setSpeed(2.25,180);
 		}
+	}
 		/*
 		else if (keyIsDown(DOWN_ARROW)) {
 			player.setSpeed(2.25,90);
@@ -44,11 +46,12 @@ function player_movement() {
 			player.setSpeed(2.25,270);
 		}
 		*/
+		/*
 		else {
 			player.setSpeed(0,0)	
 		}
+		*/
 	}
-}
 
 function setup() {
 	score = 0;
