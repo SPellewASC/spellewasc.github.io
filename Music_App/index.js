@@ -68,7 +68,7 @@ function enemy_movement() {
 		obstacle.position.y = 650-inputLevel*height*5;
 	}
 	if (keyIsDown(CONTROL)) {
-		console.log(obstacle.position.y)
+		console.log(650-inputLevel*height*5)
 		console.log(inputLevel)
 	}
 }
@@ -88,7 +88,7 @@ function setup() {
 	input = new p5.AudioIn()
 	input.start()
 	player = createSprite(50,280,50,100)
-	obstacle = createSprite(305+75,Math.random()*1220,150,150)
+	obstacle = createSprite(305-75,Math.random()*1220,150,150)
   	var myAnimation = player.addAnimation("floating", "assets/ghost_standing0001.png", "assets/ghost_standing0007.png");
   	player.addAnimation("moving", "assets/ghost_walk0001.png", "assets/ghost_walk0004.png");
 	player.addAnimation("spinning", "assets/ghost_spin0001.png", "assets/ghost_spin0003.png");
