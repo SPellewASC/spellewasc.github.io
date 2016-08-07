@@ -53,7 +53,7 @@ function player_movement() {
 			player.setSpeed(2.25,180);
 		}
 	}
-	if (keyIsPressed === false) {
+	if (keyCode === ENTER) {
 		player.setSpeed(0,0);
 		player.changeAnimation("floating")
 	}
