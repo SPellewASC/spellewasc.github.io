@@ -44,7 +44,7 @@ function player_movement() {
 			player.setSpeed(2.25,0);
 		}
 	}
-	if (player.position.x > width-player.width+9 && player.position.x < width) {
+	if (player.position.x > width-player.width+13.5 && player.position.x < width) {
 		player.setSpeed(0,0);
 		player.changeAnimation("floating")
 		if (keyIsDown(LEFT_ARROW)) {
