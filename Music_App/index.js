@@ -135,7 +135,7 @@ function draw() {
 		createCanvas(1220,610);
 		background(255);
 		textSize(32);
-		text("GAME OVER", 10, 30);
+		text("GAME OVER", 80, 30);
 	}
 	if (gameover === false) {
 		if (mode === 1 && error === false) {
