@@ -71,8 +71,8 @@ function enemy_movement() {
 	}
 	*/
 	if (keyIsDown(CONTROL)) {
-		console.log(650-inputLevel*height*5)
-		console.log(inputLevel)
+		//console.log(650-inputLevel*height*5)
+		//console.log(inputLevel)
 	}
 }
 
