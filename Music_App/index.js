@@ -79,8 +79,10 @@ function enemy_movement() {
 function collision() {
 	function overlap() {
 		player.visible = false
+		console.log(gameover)
 		if (keyCode === TAB) {
 			gameover = true
+		console.log(gameover)
 		}
 	}
 	player.collide(obstacle, overlap);
@@ -137,7 +139,7 @@ function draw() {
 		createCanvas(1220,610);
 		background(255);
 		textSize(32);
-		text("ERROR", 10, 30);
+		text("GAME OVER", 10, 30);
 	}
 	if (gameover === false) {
 		if (mode === 1 && error === false) {
