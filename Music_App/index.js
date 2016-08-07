@@ -130,9 +130,11 @@ function draw() {
 			}
 		}
 	}
-	if (mode === 0 && gameover === true) {
+	if (mode === 1 && gameover === true) {
 		createCanvas(1220,610);
-		background(0)
+		background(255);
+		textSize(32);
+		text("ERROR", 10, 30);
 	}
 	if (mode === 1 && error === false) {
 		createCanvas(1220,610);
