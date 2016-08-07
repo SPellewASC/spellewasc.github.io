@@ -73,6 +73,16 @@ function enemy_movement() {
 	}
 }
 
+function collision() {
+	function overlap() {
+		player.visible = false
+		if (keyIsPressed === true) {
+			gameover = true
+		}
+	}
+	player.collide(obstacle, overlap);
+}
+
 function setup() {
 	score = 0;
 	mode = 0;
@@ -88,7 +98,7 @@ function setup() {
 	input = new p5.AudioIn()
 	input.start()
 	player = createSprite(50,280,50,100)
-	obstacle = createSprite(305-75,Math.random()*1220,150,150)
+	obstacle = createSprite(Math.random()*1220,310-75,150,150)
   	var myAnimation = player.addAnimation("floating", "assets/ghost_standing0001.png", "assets/ghost_standing0007.png");
   	player.addAnimation("moving", "assets/ghost_walk0001.png", "assets/ghost_walk0004.png");
 	player.addAnimation("spinning", "assets/ghost_spin0001.png", "assets/ghost_spin0003.png");
@@ -131,6 +141,7 @@ function draw() {
 		drawSprites();
 		player_movement()
 		enemy_movement()
+		collision()
 	}
 	if (mode === 1 && error === true) {
 		createCanvas(1220,610);
