@@ -79,7 +79,7 @@ function enemy_movement() {
 function collision() {
 	function overlap() {
 		player.visible = false
-		if (keyCode === ENTER) {
+		if (keyCode === TAB) {
 			gameover = true
 		}
 	}
