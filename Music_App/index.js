@@ -24,7 +24,7 @@ function togglePlay() {
 }
 
 */
-
+/*
 function player_movement() {
 	if (keyIsDown(RIGHT_ARROW)) {
 		player.mirrorX(1);
@@ -58,6 +58,9 @@ function player_movement() {
 		player.setSpeed(0,0);
 		player.changeAnimation("floating")
 	}
+	*/
+	player.velocity.x = (camera.mouseX-ghost.position.x)/20;
+  	player.velocity.y = (camera.mouseY-ghost.position.y)/20;
 }
 
 function enemy_movement() {
@@ -85,6 +88,7 @@ function collision() {
 }
 
 function setup() {
+	var SCENE_W = 999999840;
 	score = 0;
 	mode = 0;
 	gameover = false;
@@ -147,6 +151,8 @@ function draw() {
 			player_movement()
 			enemy_movement()
 			collision()
+			camera.position.x = player.position.x;
+  			
 		}
 		if (mode === 1 && error === true) {
 			createCanvas(1220,610);
