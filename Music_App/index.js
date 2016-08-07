@@ -44,7 +44,7 @@ function player_movement() {
 			player.setSpeed(2.25,0);
 		}
 	}
-	if (player.position.x > width-player.width+13.5 && player.position.x < width) {
+	if (player.position.x > width-player.width+18 && player.position.x < width) {
 		player.setSpeed(0,0);
 		player.changeAnimation("floating")
 		if (keyIsDown(LEFT_ARROW)) {
@@ -61,7 +61,7 @@ function player_movement() {
 
 function enemy_movement() {
 	inputLevel = input.getLevel();
-	obstacle.position.y = inputLevel*height*-5;
+	obstacle.position.y = 650-inputLevel*height*5;
 	if (keyIsDown(RIGHT_ARROW)) {
 		console.log(obstacle.position.y)
 		console.log(inputLevel)
