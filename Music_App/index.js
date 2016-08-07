@@ -53,7 +53,7 @@ function player_movement() {
 			player.setSpeed(2.25,180);
 		}
 	}
-	if (keyCode === ENTER) {
+	if (keyIsPressed === false) {
 		player.setSpeed(0,0);
 		player.changeAnimation("floating")
 	}
@@ -78,7 +78,7 @@ function enemy_movement() {
 function collision() {
 	function overlap() {
 		player.visible = false
-		if (keyIsPressed === true) {
+		if (keyCode === ENTER) {
 			gameover = true
 		}
 	}
