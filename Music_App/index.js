@@ -145,7 +145,6 @@ function draw() {
 	if (gameover === false) {
 		if (mode === 1 && error === false) {
 			createCanvas(1220,610);
-			Camera.on()
 			background(0);
 	  		// console.log(inputLevel)
 			drawSprites();
