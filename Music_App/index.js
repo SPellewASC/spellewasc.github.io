@@ -24,8 +24,9 @@ function togglePlay() {
 }
 
 */
-/*
+
 function player_movement() {
+	/*
 	if (keyIsDown(RIGHT_ARROW)) {
 		player.mirrorX(1);
 		player.changeAnimation("moving")
