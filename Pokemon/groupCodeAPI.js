@@ -116,5 +116,4 @@ function draw() {
 
 	image(canvas,0,0);
 	drawSprites();
-
 }
