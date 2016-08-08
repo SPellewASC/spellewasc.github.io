@@ -60,8 +60,8 @@ function player_movement() {
 		player.changeAnimation("floating")
 	}
 	*/
-	player.velocity.x = (camera.mouseX-ghost.position.x)/20;
-  	player.velocity.y = (camera.mouseY-ghost.position.y)/20;
+	player.velocity.x = (camera.mouseX-player.position.x)/20;
+  	player.velocity.y = (camera.mouseY-player.position.y)/20;
 }
 
 function enemy_movement() {
