@@ -54,7 +54,30 @@ var player_url_6 = "https://spellewasc.github.io/FINAL/assets/archery/player_mod
 var player_url_7 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/1/7.png";
 var player_url_8 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/1/8.png";
 var player_url_9 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/1/9.png";
-
+var player_url_2_1 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/2/1.png";
+var player_url_2_2 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/2/2.png";
+var player_url_2_3 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/2/3.png";
+var player_url_2_4 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/2/4.png";
+var player_url_2_5 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/2/5.png";
+var player_url_2_6 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/2/6.png";
+var player_url_2_7 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/2/7.png";
+var player_url_2_9 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/2/9.png";
+var player_url_3_1 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/3/1.png";
+var player_url_3_2 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/3/2.png";
+var player_url_3_3 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/3/3.png";
+var player_url_3_4 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/3/4.png";
+var player_url_3_5 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/3/5.png";
+var player_url_3_6 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/3/6.png";
+var player_url_3_7 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/3/7.png";
+var player_url_3_9 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/3/9.png";
+var player_url_4_1 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/4/1.png";
+var player_url_4_2 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/4/2.png";
+var player_url_4_3 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/4/3.png";
+var player_url_4_4 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/4/4.png";
+var player_url_4_5 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/4/5.png";
+var player_url_4_6 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/4/6.png";
+var player_url_4_7 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/4/7.png";
+var player_url_4_9 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/4/9.png";
 // var canvas = loadImage();
 
 /*
@@ -146,6 +169,12 @@ function enemy_() {
 	enemy_group.add(enemy_1)
 	enemy_group.add(enemy_2)
 	enemy_group.add(enemy_3)
+	enemy_1.addAnimation("running", player_model_2_1, player_model_2_2, player_model_2_3, player_model_2_4, player_model_2_5, player_model_2_6, player_model_2_7);
+	enemy_1.addAnimation("jumping", player_model_2_9)
+	enemy_2.addAnimation("running", player_model_3_1, player_model_3_2, player_model_3_3, player_model_3_4, player_model_3_5, player_model_3_6, player_model_3_7);
+	enemy_2.addAnimation("jumping", player_model_3_9)
+	enemy_3.addAnimation("running", player_model_4_1, player_model_4_2, player_model_4_3, player_model_4_4, player_model_4_5, player_model_4_6, player_model_4_7);
+	enemy_3.addAnimation("jumping", player_model_4_9)
 }
 
 function collision() {
@@ -166,6 +195,11 @@ function enemy_movement() {
 	enemy_3.velocity.x = random_3;
 	// console.log(enemy_1_jumping)
 	
+	enemy_1.changeAnimation("running")
+	enemy_2.changeAnimation("running")
+	enemy_3.changeAnimation("running")
+
+
 	if (enemy_1_jumping === true && initial_jump_1 === true) {
 
 
@@ -325,6 +359,30 @@ function preload() {
 	player_model_7 = loadImage(player_url_7)
 	player_model_8 = loadImage(player_url_8)
 	player_model_9 = loadImage(player_url_9)
+	player_model_2_1 = loadImage(player_url_2_1)
+	player_model_2_2 = loadImage(player_url_2_2)
+	player_model_2_3 = loadImage(player_url_2_3)
+	player_model_2_4 = loadImage(player_url_2_4)
+	player_model_2_5 = loadImage(player_url_2_5)
+	player_model_2_6 = loadImage(player_url_2_6)
+	player_model_2_7 = loadImage(player_url_2_7)
+	player_model_2_9 = loadImage(player_url_2_9)
+	player_model_3_1 = loadImage(player_url_3_1)
+	player_model_3_2 = loadImage(player_url_3_2)
+	player_model_3_3 = loadImage(player_url_3_3)
+	player_model_3_4 = loadImage(player_url_3_4)
+	player_model_3_5 = loadImage(player_url_3_5)
+	player_model_3_6 = loadImage(player_url_3_6)
+	player_model_3_7 = loadImage(player_url_3_7)
+	player_model_3_9 = loadImage(player_url_3_9)
+	player_model_4_1 = loadImage(player_url_4_1)
+	player_model_4_2 = loadImage(player_url_4_2)
+	player_model_4_3 = loadImage(player_url_4_3)
+	player_model_4_4 = loadImage(player_url_4_4)
+	player_model_4_5 = loadImage(player_url_4_5)
+	player_model_4_6 = loadImage(player_url_4_6)
+	player_model_4_7 = loadImage(player_url_4_7)
+	player_model_4_9 = loadImage(player_url_4_9)
 }
 
 function setup() {
