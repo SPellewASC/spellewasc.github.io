@@ -20,11 +20,10 @@ var player;
 var enemy_1;
 var enemy_2;
 var enemy_3;
-var background;
 var cnv;
 var enemy_group;
-var time;
-var millisecond;
+// var time;
+// var millisecond;
 var random_1;
 var random_2;
 var random_3;
@@ -34,7 +33,7 @@ var obstacle_1;
 var obstacle_group;
 var obstacle_group_1;
 var speed_increase;
-var setup_time;
+// var setup_time;
 var int_dist_1;
 var int_group_1;
 var int_dist_2;
@@ -42,6 +41,8 @@ var int_group_2;
 var int_dist_3;
 var int_group_3;
 var finish_line;
+var gameover = false;
+var gameoutcome = false;
 var image_url_A = "https://spellewasc.github.io/FINAL/assets/pi4xny9iA.png";
 var image_url_B = "https://spellewasc.github.io/FINAL/assets/pi4xny9iB.png";
 var image_url_Z = "https://spellewasc.github.io/FINAL/assets/pi4xny9iZ.jpg";
@@ -103,10 +104,12 @@ function setup_() {
 	}
 	line(-1350,545.454545455,scene_w,545.454545455);
 	fill(255);
-	textSize(32);
-	text("Time : " + time, player.position.x - 250, 40);
+	// textSize(32);
+	// text("Time : " + time, player.position.x - 250, 40);
    	textSize(24);
-   	text("Press SPACE to jump over the hurdles.", player.position.x - 250, 70);
+   	text("Press SPACE to jump over the hurdles.", player.position.x - 250, 40);
+   	textSize(18);
+   	text("If you're going too slow, press SPACE to speed up.", player.position.x - 250, 70);
 }
 
 function player_() {
@@ -175,6 +178,9 @@ function enemy_() {
 	enemy_2.addAnimation("jumping", player_model_3_9)
 	enemy_3.addAnimation("running", player_model_4_1, player_model_4_2, player_model_4_3, player_model_4_4, player_model_4_5, player_model_4_6, player_model_4_7);
 	enemy_3.addAnimation("jumping", player_model_4_9)
+	enemy_1.scale = 0.5
+	enemy_2.scale = 0.5
+	enemy_3.scale = 0.5
 }
 
 function collision() {
@@ -290,8 +296,26 @@ function enemy_movement() {
 	}
 }
 
-function finish_collision() {
-	game = false
+function player_finish_collision() {
+	gameoutcome = true
+	gameover = true
+	player.remove()
+	enemy_1.remove()
+	enemy_2.remove()
+	enemy_3.remove()
+	obstacle.remove()
+	obstacle_1.remove()
+}
+
+function enemy_finish_collision() {
+	gameoutcome = false
+	gameover = true
+	player.remove()
+	enemy_1.remove()
+	enemy_2.remove()
+	enemy_3.remove()
+	obstacle.remove()
+	obstacle_1.remove()
 }
 
 function obstacles() {
@@ -393,8 +417,6 @@ function setup() {
 	finish_1.addImage(finish_line)
 	finish_2 = createSprite()
 	finish_2.addImage(finish_line)
-	finish_3 = createSprite()
-	finish_3.addImage(finish_line)
 	fill(255)
 	strokeWeight(4)
 	finish.scale = 0.2
@@ -424,36 +446,79 @@ function setup() {
 }
 
 function draw() {
-	if (game === false) {
-		background(0)
-		fill(255)
-		textSize(64);
-		textAlign(CENTER);
-		text("Press ENTER to begin the game.",675,300)
-		if (keyCode === ENTER) {
-			player.velocity.x = 6
-			game = true
-			setup_time = millis();
+	if (gameover === false) {
+		if (game === false) {
+			background(0)
+			fill(255)
+			textSize(64);
+			textAlign(CENTER);
+			text("Press ENTER to begin the game.",675,300)
+			if (keyCode === ENTER) {
+				player.velocity.x = 6
+				game = true
+				// setup_time = millis();
+			}
+		}
+		if (game === true) {
+			// console.log(player.velocity.x)
+			// millisecond = millis();
+			setup_();
+			// time = parseInt(millisecond/1000) - parseInt(setup_time/1000)
+			camera_movement();
+			drawSprites();
+			player_movement();
+			enemy_movement();
+			player.collide(obstacle_group,collision);
+			obstacle_detection();
+			player.overlap(finish,player_finish_collision)
+			enemy_1.overlap(finish,enemy_finish_collision)
+			enemy_2.overlap(finish,enemy_finish_collision)
+			enemy_3.overlap(finish,enemy_finish_collision)
+			/*
+			finish_3.scale = 0.2
+			finish_3.rotation = 90
+			finish_3.position.x = 6589.3
+			finish_3.position.y = 339.090909091
+			*/
 		}
 	}
-	if (game === true) {
-		console.log(player.velocity.x)
-		millisecond = millis();
-		setup_();
-		time = parseInt(millisecond/1000) - parseInt(setup_time/1000)
-		camera_movement();
-		drawSprites();
-		player_movement();
-		enemy_movement();
-		player.collide(obstacle_group,collision);
-		obstacle_detection();
-		player.collide(finish,finish_collision)
-		/*
-		finish_3.scale = 0.2
-		finish_3.rotation = 90
-		finish_3.position.x = 6589.3
-		finish_3.position.y = 339.090909091
-		*/
+	if (gameover === true) {
+		if (keyCode === ENTER) {
+   			player_();
+   			enemy_();
+   			gameover = false
+   			game = true
+   			player.velocity.x = 6
+   			player.position.x = 54.545454545
+   			enemy_1.position.x = 54.545454545+109.090909091*1
+			enemy_2.position.x = 54.545454545+109.090909091*2
+			enemy_3.position.x = 54.545454545+109.090909091*3
+			random_1 = random(3.75,4.25);
+			random_2 = random(3.75,4.25);
+			random_3 = random(3.75,4.25);
+			enemy_1.velocity.x = random_1
+			enemy_2.velocity.x = random_2
+			enemy_3.velocity.x = random_3
+			drawSprites();
+		}
+		if (gameoutcome === true) {
+			background(color(0,127,127));
+			fill(255);
+   			textSize(80);
+   			textAlign(CENTER,CENTER)
+   			text("GAME OVER, YOU WIN!", 675, 300-100);
+   			textSize(60);
+   			text("Press ENTER to retry the game.",675,300)
+		}
+		if (gameoutcome === false) {
+			background(255);
+			fill(0);
+   			textSize(80);
+   			textAlign(CENTER,CENTER)
+   			text("GAME OVER, YOU LOSE!", 675, 300-100);
+   			textSize(60);
+   			text("Press ENTER to retry the game.",675,300);
+		}
 	}
 }
 

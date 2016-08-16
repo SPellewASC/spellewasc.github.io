@@ -10,7 +10,6 @@ var hypertext = document.getElementById("hypertext");
 var ctx = canvas.getContext("2d");
 var raf;
 
-/*
 var bubble = {
 	create: function (color, dx, dy) {
         var newBubble = Object.create(this);
@@ -67,4 +66,3 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-*/
