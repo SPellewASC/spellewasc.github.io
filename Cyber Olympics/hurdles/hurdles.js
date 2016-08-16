@@ -484,22 +484,18 @@ function draw() {
 	}
 	if (gameover === true) {
 		if (keyCode === ENTER) {
-   			player_();
-   			enemy_();
-   			gameover = false
-   			game = true
-   			player.velocity.x = 6
-   			player.position.x = 54.545454545
-   			enemy_1.position.x = 54.545454545+109.090909091*1
-			enemy_2.position.x = 54.545454545+109.090909091*2
-			enemy_3.position.x = 54.545454545+109.090909091*3
-			random_1 = random(3.75,4.25);
-			random_2 = random(3.75,4.25);
-			random_3 = random(3.75,4.25);
-			enemy_1.velocity.x = random_1
-			enemy_2.velocity.x = random_2
-			enemy_3.velocity.x = random_3
+   			setup_();
+			// time = parseInt(millisecond/1000) - parseInt(setup_time/1000)
+			camera_movement();
 			drawSprites();
+			player_movement();
+			enemy_movement();
+			player.collide(obstacle_group,collision);
+			obstacle_detection();
+			player.overlap(finish,player_finish_collision)
+			enemy_1.overlap(finish,enemy_finish_collision)
+			enemy_2.overlap(finish,enemy_finish_collision)
+			enemy_3.overlap(finish,enemy_finish_collision)
 		}
 		if (gameoutcome === true) {
 			background(color(0,127,127));
