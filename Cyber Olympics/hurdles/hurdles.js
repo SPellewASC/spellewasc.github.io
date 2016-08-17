@@ -1,5 +1,8 @@
-
-var finish;
+// alert("loaded")
+var you_win;
+var finish_1;
+var finish_2;
+var finish_3;
 var w = 1350;
 var h = 600;
 var scene_w = w*6;
@@ -42,7 +45,7 @@ var int_dist_3;
 var int_group_3;
 var finish_line;
 var gameover = false;
-var gameoutcome = false;
+var gameoutcome = true;
 var image_url_A = "https://spellewasc.github.io/FINAL/assets/pi4xny9iA.png";
 var image_url_B = "https://spellewasc.github.io/FINAL/assets/pi4xny9iB.png";
 var image_url_Z = "https://spellewasc.github.io/FINAL/assets/pi4xny9iZ.jpg";
@@ -79,6 +82,7 @@ var player_url_4_5 = "https://spellewasc.github.io/FINAL/assets/archery/player_m
 var player_url_4_6 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/4/6.png";
 var player_url_4_7 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/4/7.png";
 var player_url_4_9 = "https://spellewasc.github.io/FINAL/assets/archery/player_models/4/9.png";
+var you_win_url = "https://spellewasc.github.io/FINAL/assets/pi4xny9iZ.jpg";
 // var canvas = loadImage();
 
 /*
@@ -114,6 +118,7 @@ function setup_() {
 
 function player_() {
 	player = createSprite(54.545454545,109.090909091*1.5,40,40);
+	//player = createSprite(6000,109.090909091*1.5,40,40);
 	player.addAnimation("running", player_model_1, player_model_2, player_model_3, player_model_4, player_model_5, player_model_6, player_model_7);
 	player.addAnimation("colliding", player_model_8)
 	player.addAnimation("jumping", player_model_9)
@@ -124,6 +129,7 @@ function player_() {
 }
 
 function player_movement() {
+	// alert("move")
 	if (player.velocity.x < (random_1 + random_2 + random_3)/3 + 0.75) {
 		if (keyIsPressed === true && keyDown(32)) {
 			player.velocity.x = player.velocity.x + 0.015
@@ -407,31 +413,32 @@ function preload() {
 	player_model_4_6 = loadImage(player_url_4_6)
 	player_model_4_7 = loadImage(player_url_4_7)
 	player_model_4_9 = loadImage(player_url_4_9)
+	you_win = loadImage(you_win_url)
 }
 
 function setup() {
-	// cnv = createCanvas(w,h);
-	finish = createSprite()
-	finish.addImage(finish_line)
+	cnv = createCanvas(w,h);
 	finish_1 = createSprite()
 	finish_1.addImage(finish_line)
 	finish_2 = createSprite()
 	finish_2.addImage(finish_line)
+	finish_3 = createSprite()
+	finish_3.addImage(finish_line)
 	fill(255)
 	strokeWeight(4)
-	finish.scale = 0.2
-	finish.rotation = 90
-	finish.position.x = 6730.3
-	finish.position.y = 185.090909091
 	finish_1.scale = 0.2
 	finish_1.rotation = 90
 	finish_1.position.x = 6730.3
-	finish_1.position.y = 329.090909091
+	finish_1.position.y = 185.090909091
 	finish_2.scale = 0.2
 	finish_2.rotation = 90
 	finish_2.position.x = 6730.3
-	finish_2.position.y = 473.090909091
-	createCanvas(w,h);
+	finish_2.position.y = 329.090909091
+	finish_3.scale = 0.2
+	finish_3.rotation = 90
+	finish_3.position.x = 6730.3
+	finish_3.position.y = 473.090909091
+	//createCanvas(w,h);
 	player_();
 	enemy_();
 	obstacles();
@@ -446,7 +453,9 @@ function setup() {
 }
 
 function draw() {
+	// alert("draw")
 	if (gameover === false) {
+		// alert("yo// alert")
 		if (game === false) {
 			background(0)
 			fill(255)
@@ -470,10 +479,10 @@ function draw() {
 			enemy_movement();
 			player.collide(obstacle_group,collision);
 			obstacle_detection();
-			player.overlap(finish,player_finish_collision)
-			enemy_1.overlap(finish,enemy_finish_collision)
-			enemy_2.overlap(finish,enemy_finish_collision)
-			enemy_3.overlap(finish,enemy_finish_collision)
+			player.overlap(finish_1,player_finish_collision)
+			enemy_1.overlap(finish_1,enemy_finish_collision)
+			enemy_2.overlap(finish_2,enemy_finish_collision)
+			enemy_3.overlap(finish_3,enemy_finish_collision)
 			/*
 			finish_3.scale = 0.2
 			finish_3.rotation = 90
@@ -482,39 +491,55 @@ function draw() {
 			*/
 		}
 	}
+
 	if (gameover === true) {
+
+		/*
 		if (keyCode === ENTER) {
-   			setup_();
-			// time = parseInt(millisecond/1000) - parseInt(setup_time/1000)
-			camera_movement();
+   			player_();
+   			enemy_();
+   			gameover = false
+   			game = true
+   			player.velocity.x = 6
+   			player.position.x = 54.545454545
+   			enemy_1.position.x = 54.545454545+109.090909091*1
+			enemy_2.position.x = 54.545454545+109.090909091*2
+			enemy_3.position.x = 54.545454545+109.090909091*3
+			random_1 = random(3.75,4.25);
+			random_2 = random(3.75,4.25);
+			random_3 = random(3.75,4.25);
+			enemy_1.velocity.x = random_1
+			enemy_2.velocity.x = random_2
+			enemy_3.velocity.x = random_3
 			drawSprites();
-			player_movement();
-			enemy_movement();
-			player.collide(obstacle_group,collision);
-			obstacle_detection();
-			player.overlap(finish,player_finish_collision)
-			enemy_1.overlap(finish,enemy_finish_collision)
-			enemy_2.overlap(finish,enemy_finish_collision)
-			enemy_3.overlap(finish,enemy_finish_collision)
 		}
 		if (gameoutcome === true) {
+			//background(color(255,0,0));
+			console.log("true")
+			//image(you_win,width/2,height/2);
+   			textSize(60);
+   			fill(255);
+   			rect(0,0,width,height);
+   			text("Press ENTER to retry the game.",675,300);
+		}
+		if (gameoutcome === false) {
+			console.log("false")
 			background(color(0,127,127));
 			fill(255);
    			textSize(80);
    			textAlign(CENTER,CENTER)
-   			text("GAME OVER, YOU WIN!", 675, 300-100);
-   			textSize(60);
-   			text("Press ENTER to retry the game.",675,300)
+   			text("GAME OVER, YOU LOSE!", 925, 300);
+   			//textSize(60);
+   			//text("Press ENTER to retry the game.",675,300);
 		}
-		if (gameoutcome === false) {
-			background(255);
-			fill(0);
+		*/
+		background(color(0,127,127));
+			fill(255);
    			textSize(80);
    			textAlign(CENTER,CENTER)
-   			text("GAME OVER, YOU LOSE!", 675, 300-100);
-   			textSize(60);
-   			text("Press ENTER to retry the game.",675,300);
-		}
+   			text("GAME OVER", 925, 300);
+   			//textSize(60);
+   			//text("Press ENTER to retry the game.",675,300);
 	}
 }
 
