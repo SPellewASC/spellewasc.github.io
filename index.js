@@ -28,6 +28,7 @@ window.onclick = function(event) {
     }
 }
 
+ctx.fillStyle = "#FF0000";
 ctx.beginPath();
-ctx.arc(95,50,40,0,2*Math.PI);
+ctx.arc(0,0,200,0,2*Math.PI);
 ctx.stroke();
