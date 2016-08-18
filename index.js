@@ -37,3 +37,4 @@ ctx.beginPath();
 ctx.strokeStyle = 'blue';
 ctx.arc(0,0,200,0,2*Math.PI);
 ctx.stroke();
+ctx.closePath();
