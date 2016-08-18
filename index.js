@@ -34,5 +34,6 @@ window.onclick = function(event) {
 
 ctx.fillStyle = "#FF0000";
 ctx.beginPath();
+ctx.strokeStyle = 'blue';
 ctx.arc(0,0,200,0,2*Math.PI);
 ctx.stroke();
