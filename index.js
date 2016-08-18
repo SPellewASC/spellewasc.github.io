@@ -27,3 +27,5 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+ctx.fillStyle="#e67e22"
