@@ -10,45 +10,6 @@ var hypertext = document.getElementById("hypertext");
 var ctx = canvas.getContext("2d");
 var raf;
 
-var bubble = {
-	create: function (color, dx, dy) {
-        var newBubble = Object.create(this);
-        x: 100,
-		y: 100,
-		vx: 5,
-		vy: 2,
-		radius:25,
-		color: 'blue',
-		draw: function() {
-			ctx.beginPath();
-			ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2, true);
-			ctx.closePath();
-			ctx.fillStyle = this.color;
-			ctx.fill();
-		}
-};
-
-function draw() {
-	ctx.clearRect(0,0,canvas_width, canvas_height);
-	bubble.draw();
-	bubble.x += bubble.vx;
-	bubble.y += bubble.vy;
-	if (bubble.y + bubble.vy > canvas_height - 115 || bubble.y + bubble.vy < 25) {
-  bubble.vy = -bubble.vy;
-}
-if (bubble.x + bubble.vx > canvas_width - 25|| bubble.x + bubble.vx < 25) {
-  bubble.vx = -bubble.vx;
-}
-	raf = window.requestAnimationFrame(draw);
-
-}
-
-hypertext.addEventListener('mousemove', function(e){
-	raf = window.requestAnimationFrame(draw);
-});
-
-bubble.draw();
-
 // Get the modal
 var modal = document.getElementById('modal');
 
