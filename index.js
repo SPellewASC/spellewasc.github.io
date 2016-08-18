@@ -1,12 +1,16 @@
 
+/*
+
 var canvas_width = screen.availWidth;
 var canvas_height = screen.availHeight;
 //The 30 and 90 above are arbitrary figures to allow for other DIVS on the page
 var canvas_div = window.document.getElementById("Canvas_Container");
 canvas_div.innerHTML = "<canvas id='Canvas_1' width='"+canvas_width+"' height='"+canvas_height+"'></canvas>";
+var hypertext = document.getElementById("hypertext");
+
+*/
 
 var canvas = document.getElementById("Canvas_1");
-var hypertext = document.getElementById("hypertext");
 var ctx = canvas.getContext("2d");
 var raf;
 
