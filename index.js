@@ -36,8 +36,8 @@ function init() {
     var canvas = document.getElementById("Canvas_1");
     if (canvas.getContext) {
           var context = canvas.getContext("2d");
-	      context.fillStyle="green";
-	      context.strokeStyle="green";
-	      ctx.strokeRect(50,50,100,100);
+	      ctx.beginPath();
+	      ctx.arc(95,50,40,0,2*Math.PI);
+	      ctx.stroke();
     }
 }
