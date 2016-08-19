@@ -3,7 +3,7 @@ html {
 	background-color: #5bc0de;
 }
 
-h5 {
+h1 {
 	color:white;
 }
 
@@ -14,8 +14,10 @@ h5 {
 
 #Olympics {
 	background-color: #ffffff;
+	color: black;
 }
 
 #Pokemon {
 	background-color: #ffffff;
+	color: black;
 }
