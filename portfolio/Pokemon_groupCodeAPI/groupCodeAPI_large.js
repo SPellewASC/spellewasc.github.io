@@ -12,14 +12,6 @@ var cnv;
 var pokeID;
 var pokeimg;
 var pokemon;
-var viewportwidth = document.documentElement.clientWidth;
-var viewportheight = document.documentElement.clientHeight;
-window.resizeBy(-300,0);
-window.moveTo(0,0);
-
-function popup() {
-	window.open("groupCodeAPI_large.html","blank","[width=620,scrollbar=0,resizeable=0,status=0,titlebar=0,toolbar=0,height=620,left=+"(viewportwidth-300)+",menubar=0,top=0]");
-}
 
 function centerCanvas() {
   var x = (windowWidth - width) / 2;
@@ -62,11 +54,12 @@ function preload() {
 
 function setup() {
 
-    cnv = createCanvas(400, 400);
+    cnv = createCanvas(620, 620);
     centerCanvas();
 	image(canvas,0,0);
 	player = createSprite(320,320,64,64);
 	player.addImage(player_model);
+	cnv.parent('Script');
 	/*
 	for (var i = 0; i <= 10; ++i) {
 		pokemon[i] = createSprite(Math.random() * 640, Math.random() * 640, 1, 1)
