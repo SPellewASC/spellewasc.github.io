@@ -36,10 +36,9 @@ function init() {
     var canvas = document.getElementById("Canvas_1");
     if (canvas.getContext) {
           var context = canvas.getContext("2d");
-	      ctx.beginPath();
-	      ctx.arc(95,50,40,0,2*Math.PI);
-	      ctx.stroke();
-	      ctx.fillStyle = "#5bc0de";
-	      ctx.fill();
+	  ctx.beginPath();
+	  ctx.arc(95,50,15,0,2*Math.PI);
+	  ctx.fillStyle = "#5bc0de";
+	  ctx.fill();
     }
 }
