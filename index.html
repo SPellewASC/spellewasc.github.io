@@ -16,7 +16,7 @@
 
 <body>
 <div id="Canvas_Container">
-<canvas id="Canvas_1">
+<canvas id="Canvas_1" onload="draw()">
 </canvas>
 </div>
 
@@ -172,8 +172,9 @@
     context.strokeStyle="green";
     context.moveTo(100, 150);
     context.lineTo(450, 50);
-    context.stroke();
-
+    function draw() {
+    	context.stroke();
+    }
 </script>
 
 
