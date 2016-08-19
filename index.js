@@ -39,5 +39,7 @@ function init() {
 	      ctx.beginPath();
 	      ctx.arc(95,50,40,0,2*Math.PI);
 	      ctx.stroke();
+	      ctx.fillStyle = "#5bc0de";
+	      ctx.fill();
     }
 }
