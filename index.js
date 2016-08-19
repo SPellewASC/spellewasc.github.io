@@ -37,7 +37,7 @@ function init() {
     if (canvas.getContext) {
           var context = canvas.getContext("2d");
 	  ctx.beginPath();
-	  ctx.arc(95,50,25,0,2*Math.PI);
+	  ctx.arc(95,50,20,0,2*Math.PI);
 	  ctx.fillStyle = "#5bc0de";
 	  ctx.fill();
     }
