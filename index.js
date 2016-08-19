@@ -32,9 +32,12 @@ window.onclick = function(event) {
     }
 }
 
-ctx.fillStyle = "#FF0000";
-ctx.beginPath();
-ctx.strokeStyle = 'blue';
-ctx.arc(0,0,200,0,2*Math.PI);
-ctx.stroke();
-ctx.closePath();
+function init() {
+    var canvas = document.getElementById("Canvas_1");
+    if (canvas.getContext) {
+          var context = canvas.getContext("2d");
+	      context.fillStyle="green";
+	      context.strokeStyle="green";
+	      ctx.strokeRect(50,50,100,100);
+    }
+}
