@@ -7,6 +7,11 @@ h1 {
 	color:white;
 }
 
+#Olympics_img {
+	width: 50%;
+	height: auto;
+}
+
 #Pokemon_img {
 	width: 50%;
 	height: auto;
