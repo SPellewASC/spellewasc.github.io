@@ -3,6 +3,19 @@ html {
 	background-color: #5bc0de;
 }
 
-div {
+h5 {
+	color:white;
+}
+
+#Projects {
+	background-color: #ffffff;
+	color: #5bc0de;
+}
+
+#Olympics {
+	background-color: #ffffff;
+}
+
+#Pokemon {
 	background-color: #ffffff;
 }
