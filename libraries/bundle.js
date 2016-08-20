@@ -7094,5 +7094,4 @@ var port = 3000;
 var serverUrl = "localhost";
 
 console.log("Listening at " + serverUrl + ":" + port);
-server.listen(port, serverUrl);
 },{"http":25}]},{},[35]);
