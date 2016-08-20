@@ -7093,15 +7093,6 @@ var http = require("http");
 var port = 3000;
 var serverUrl = "localhost";
 
-var server = http.createServer(function(req, res) {
-
-  console.log("Request: " + req.url);
-  
-  var html = "<!DOCTYPE html><html lang="+"en"+"><head><meta charset="+"UTF-8"+"><title>Group Code API</title></head><body><div id="+"Jumbotron"+"><h1 class="+"jumbotron"+"style="+"text-align:center"+">Here's the map!</h1></div><script src="+"https://spellewasc.github.io/libraries/jquery-3.1.0.min.js"+" type="+"text/javascript></script><script src="+"https://spellewasc.github.io/libraries/p5.min.js"+" type="+"text/javascript></script>"+"<script src="+"https://spellewasc.github.io/libraries/p5.play.js "+"type="+"text/javascript></script><script src="+"https://spellewasc.github.io/libraries/p5.dom.js type="+"text/javascript></script><script src="+"https://spellewasc.github.io/libraries/bootstrap.min.js  type="+"text/javascript></script><link rel="+"stylesheet"+"href="+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity="+"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin="+"anonymous>"+"<script src="+"https://spellewasc.github.io/portfolio/Pokemon_groupCodeAPI/groupCodeAPIv2.js"+"></script><script src="+"bundle.js></script><div id="+"Script"+"></div>"+"</body></html>";
-  res.end(html);
-
-});
-
 console.log("Listening at " + serverUrl + ":" + port);
 server.listen(port, serverUrl);
 },{"http":25}]},{},[35]);
