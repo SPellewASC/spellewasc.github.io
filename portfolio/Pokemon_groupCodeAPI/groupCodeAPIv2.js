@@ -1,6 +1,6 @@
 
-var Pokedex = require('pokedex-promise-v2');
-var P = new Pokedex();
+//var Pokedex = require('pokedex-promise-v2');
+//var P = new Pokedex();
 
 var mode = 0;
 var contact = true;
