@@ -2,7 +2,7 @@
 //var Pokedex = require('pokedex-promise-v2');
 //var P = new Pokedex();
 
-var mode = 0;
+var mode = 1;
 var contact = true;
 var x;
 var y;
