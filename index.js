@@ -26,11 +26,13 @@ function froth() {
     if (canvas.getContext) {
         context.beginPath();
         context.arc(foam.x, foam.y, foam.radius, 0, 2 * Math.PI);
-        if (i % 2 === 0) {
-            context.fillStyle = foam.fill_1;
-        }
-        else {
-            context.fillStyle = foam.fill_2;
+        for (var j = 0; j <= 875; j++) {
+            if (j % 2 === 0) {
+                context.fillStyle = foam.fill_1;
+            }
+            else {
+                context.fillStyle = foam.fill_2;
+            }
         }
         context.fill();
     }
