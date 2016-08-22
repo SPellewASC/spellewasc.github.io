@@ -20,9 +20,9 @@ function froth() {
         "x": foam_x,
         "y": foam_y,
         "radius": 20,
-        "fill_1": "#AEB0F1",
-        "fill_2": "#FFEAAD",
-        "fill_3": "#FFD6AD"
+        "fill_1": "#BEBFF6",
+        "fill_2": "#FFEEBB",
+        "fill_3": "#FFDEBB"
     }
     if (canvas.getContext) {
         context.beginPath();
