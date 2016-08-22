@@ -40,28 +40,43 @@ img {
     border-top-left-radius: 12px;
     border-bottom-left-radius: 0px;
     z-index: 1;
+    outline-color: #989898;
+	background-color:#989898;
+	border-color: #989898;
 }
 #Button_2 {
     width: 15.02vw;
     top: 15vh;
     border-radius: 0;
     z-index: 1;
+    outline-color: #989898;
+	background-color:#989898;
+	border-color: #989898;
 }
 #Button_3 {
     width: 15.02vw;
     top: 15vh;
     border-radius: 0;
     z-index: 1;
+    outline-color: #989898;
+	background-color:#989898;
+	border-color: #989898;
 }
 #Button_4 {
     width: 15.02vw;
     top: 15vh;
     border-radius: 0;
     z-index: 1;
+    outline-color: #989898;
+	background-color:#989898;
+	border-color: #989898;
 }
 #Button_5 {
     width: 15.02vw;
     top: 15vh;
     z-index: 1;
     border-top-right-radius: 12px;
+    outline-color: #989898;
+	background-color:#989898;
+	border-color: #989898;
 }
