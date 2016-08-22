@@ -40,7 +40,7 @@ img {
     border-top-left-radius: 12px;
     border-bottom-left-radius: 0px;
     z-index: 1;
-    outline-color: #00000;
+    outline-color: #FFFFFF;
     background-color: #41A077;
     border-color: #41A077;
 }
@@ -49,7 +49,7 @@ img {
     top: 15vh;
     border-radius: 0;
     z-index: 1;
-    outline-color: #41A077;
+    outline-color: #FFFFFF;
     background-color: #41A077;
     border-color: #41A077;
 }
@@ -58,7 +58,7 @@ img {
     top: 15vh;
     border-radius: 0;
     z-index: 1;
-    outline-color: #41A077;
+    outline-color: #FFFFFF;
     background-color: #41A077;
     border-color: #41A077;
 }
@@ -67,7 +67,7 @@ img {
     top: 15vh;
     border-radius: 0;
     z-index: 1;
-    outline-color: #41A077;
+    outline-color: #FFFFFF;
     background-color: #41A077;
     border-color: #41A077;
 }
@@ -76,7 +76,7 @@ img {
     top: 15vh;
     z-index: 1;
     border-top-right-radius: 12px;
-    outline-color: #41A077;
+    outline-color: #FFFFFF;
     background-color: #41A077;
     border-color: #41A077;
 }
