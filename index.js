@@ -20,17 +20,22 @@ function froth() {
         "x": foam_x,
         "y": foam_y,
         "radius": 12,
-        "fill_1": "#FD636B",
-        "fill_2": "#FFD763"
+        "fill_1": "#6D70E5",
+        "fill_2": "#FFD763",
+        "fill_3": "#FFB263"
     }
     if (canvas.getContext) {
         context.beginPath();
         context.arc(foam.x, foam.y, foam.radius, 0, 2 * Math.PI);
-        if (Math.random() * 2 <= 1) {
+        var foam_random = Math.random() * 2;
+        if (foam_random <= 1) {
             context.fillStyle = foam.fill_1;
         }
-        if (Math.random() * 2 > 1){
+        else if (foam_random > 1 && foam_random <= 2) {
             context.fillStyle = foam.fill_2;
+        }
+        else {
+            context.fillStyle = foam.fill_3;
         }
         context.fill();
     }
