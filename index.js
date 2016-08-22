@@ -27,7 +27,7 @@ function froth() {
     if (canvas.getContext) {
         context.beginPath();
         context.arc(foam.x, foam.y, foam.radius, 0, 2 * Math.PI);
-        var foam_random = Math.random() * 2;
+        var foam_random = Math.random() * 3;
         if (foam_random <= 1) {
             context.fillStyle = foam.fill_1;
         }
