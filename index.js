@@ -8,7 +8,7 @@ var canvas = document.getElementById("Canvas_1");
 var context = canvas.getContext("2d");
 
 var init = function() {
-    for (var i = 0; i <= 650; i++) {
+    for (var i = 0; i <= 875; i++) {
         requestAnimationFrame(froth);
     }
 }
@@ -19,7 +19,7 @@ function froth() {
     var foam = {
         "x": foam_x,
         "y": foam_y,
-        "radius": 10,
+        "radius": 15,
         "fill": "#5bc0de"
     }
     if (canvas.getContext) {
