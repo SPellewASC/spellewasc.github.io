@@ -20,12 +20,18 @@ function froth() {
         "x": foam_x,
         "y": foam_y,
         "radius": 12,
-        "fill": "#FFFFFF"
+        "fill_1": "#FD636B"
+        "fill_2": "#FFD763"
     }
     if (canvas.getContext) {
         context.beginPath();
         context.arc(foam.x, foam.y, foam.radius, 0, 2 * Math.PI);
-        context.fillStyle = foam.fill;
+        if (i % 2 === 0) {
+            context.fillStyle = foam.fill_1;
+        }
+        else {
+            context.fillStyle = foam.fill_2;
+        }
         context.fill();
     }
 }
