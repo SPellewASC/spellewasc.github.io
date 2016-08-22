@@ -5,7 +5,7 @@ img {
     border-bottom-right-radius: 17px;
 }
 #Canvas_Container {
-    background-color: #0A1612;
+    background-color: #000000;
     width: 100vw;
     position: fixed;
 }
@@ -40,43 +40,43 @@ img {
     border-top-left-radius: 12px;
     border-bottom-left-radius: 0px;
     z-index: 1;
-    outline-color: #F7CE3E;
-    background-color: #F7CE3E;
-    border-color: #F7CE3E;
+    outline-color: #4EC5C1;
+    background-color: #4EC5C1;
+    border-color: #4EC5C1;
 }
 #Button_2 {
     width: 15.02vw;
     top: 15vh;
     border-radius: 0;
     z-index: 1;
-    outline-color: #F7CE3E;
-    background-color: #F7CE3E;
-    border-color: #F7CE3E;
+    outline-color: #4EC5C1;
+    background-color: #4EC5C1;
+    border-color: #4EC5C1;
 }
 #Button_3 {
     width: 15.02vw;
     top: 15vh;
     border-radius: 0;
     z-index: 1;
-    outline-color: #F7CE3E;
-    background-color: #F7CE3E;
-    border-color: #F7CE3E;
+    outline-color: #4EC5C1;
+    background-color: #4EC5C1;
+    border-color: #4EC5C1;
 }
 #Button_4 {
     width: 15.02vw;
     top: 15vh;
     border-radius: 0;
     z-index: 1;
-    outline-color: #F7CE3E;
-    background-color: #F7CE3E;
-    border-color: #F7CE3E;
+    outline-color: #4EC5C1;
+    background-color: #4EC5C1;
+    border-color: #4EC5C1;
 }
 #Button_5 {
     width: 15.02vw;
     top: 15vh;
     z-index: 1;
     border-top-right-radius: 12px;
-    outline-color: #F7CE3E;
-    background-color: #F7CE3E;
-    border-color: #F7CE3E;
+    outline-color: #4EC5C1;
+    background-color: #4EC5C1;
+    border-color: #4EC5C1;
 }
