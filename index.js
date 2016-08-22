@@ -8,7 +8,7 @@ var canvas = document.getElementById("Canvas_1");
 var context = canvas.getContext("2d");
 
 var init = function() {
-    for (var i = 0; i <= 875; i++) {
+    for (var i = 0; i <= 675; i++) {
         requestAnimationFrame(froth);
     }
 }
