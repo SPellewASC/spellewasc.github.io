@@ -40,43 +40,28 @@ img {
     border-top-left-radius: 12px;
     border-bottom-left-radius: 0px;
     z-index: 1;
-    outline-color: #FFFFFF;
-    background-color: #41A077;
-    border-color: #57BC91;
 }
 #Button_2 {
     width: 15.02vw;
     top: 15vh;
     border-radius: 0;
     z-index: 1;
-    outline-color: #FFFFFF;
-    background-color: #41A077;
-    border-color: #57BC91;
 }
 #Button_3 {
     width: 15.02vw;
     top: 15vh;
     border-radius: 0;
     z-index: 1;
-    outline-color: #FFFFFF;
-    background-color: #41A077;
-    border-color: #57BC91;
 }
 #Button_4 {
     width: 15.02vw;
     top: 15vh;
     border-radius: 0;
     z-index: 1;
-    outline-color: #FFFFFF;
-    background-color: #41A077;
-    border-color: #57BC91;
 }
 #Button_5 {
     width: 15.02vw;
     top: 15vh;
     z-index: 1;
     border-top-right-radius: 12px;
-    outline-color: #FFFFFF;
-    background-color: #41A077;
-    border-color: #57BC91;
 }
