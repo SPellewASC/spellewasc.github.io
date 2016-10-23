@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8"/>
 <title>Dodger</title>
-<script type="text/javascript" src="phaser.min.js"></script>
+<script type="text/javascript" src="https://spellewasc.github.io/portfolio/phaser.min.js"></script>
 	<style type="text/css">
 	body {
 		margin: 0;
@@ -49,15 +49,15 @@ var powerup2;
 var invulnerability = false;
 
 function preload() {
-	game.load.image('player', 'assets/player.png');
-	game.load.image('baddie', 'assets/baddie.png');
-	game.load.image('mouse_', 'assets/mouse.png');
-	game.load.image('keyboard_', 'assets/keyboard.png');
-	game.load.image('diamond_', 'assets/diamond.png');
-	game.load.image('star_', 'assets/star.png');
-	game.load.audio('background.wav', 'assets/background.wav');
-	game.load.audio('gameover.wav', 'assets/gameover.wav');
-	game.load.audio('opening.wav', 'assets/opening.wav');
+	game.load.image('player', 'https://spellewasc.github.io/portfolio/player.png');
+	game.load.image('baddie', 'https://spellewasc.github.io/portfolio/baddie.png');
+	game.load.image('mouse_', 'https://spellewasc.github.io/portfolio/mouse.png');
+	game.load.image('keyboard_', 'https://spellewasc.github.io/portfolio/keyboard.png');
+	game.load.image('diamond_', 'https://spellewasc.github.io/portfolio/diamond.png');
+	game.load.image('star_', 'https://spellewasc.github.io/portfolio/star.png');
+	game.load.audio('background.wav', 'https://spellewasc.github.io/portfolio/background.wav');
+	game.load.audio('gameover.wav', 'https://spellewasc.github.io/portfolio/gameover.wav');
+	game.load.audio('opening.wav', 'https://spellewasc.github.io/portfolio/opening.wav');
 }
 function create() {
 	game.physics.startSystem(Phaser.Physics.ARCADE);
