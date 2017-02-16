@@ -1,0 +1,9 @@
+{
+  "short_name": "Dodger",
+  "name": "Dodger",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "start_url": "updated.html",
+  "background_color": "#000000",
+  "description": "A game."
+}
